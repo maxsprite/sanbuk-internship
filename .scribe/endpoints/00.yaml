@@ -26,35 +26,119 @@ endpoints:
         name: first_name
         description: ''
         required: true
-        example: earum
+        example: ut
         type: string
         custom: []
       last_name:
         name: last_name
         description: ''
         required: true
-        example: et
+        example: sapiente
         type: string
         custom: []
       phone:
         name: phone
         description: ''
         required: true
-        example: magnam
+        example: inventore
         type: string
         custom: []
       email:
         name: email
         description: 'Must be a valid email address.'
         required: false
-        example: rwhite@example.com
+        example: jaqueline15@example.org
         type: string
         custom: []
     cleanBodyParameters:
-      first_name: earum
-      last_name: et
-      phone: magnam
-      email: rwhite@example.com
+      first_name: ut
+      last_name: sapiente
+      phone: inventore
+      email: jaqueline15@example.org
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/v1/auth/sign-in
+    metadata:
+      groupName: User
+      groupDescription: ''
+      subgroup: Auth
+      subgroupDescription: ''
+      title: 'Sign In'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      phone:
+        name: phone
+        description: ''
+        required: true
+        example: fugiat
+        type: string
+        custom: []
+    cleanBodyParameters:
+      phone: fugiat
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/v1/auth/verification
+    metadata:
+      groupName: User
+      groupDescription: ''
+      subgroup: Auth
+      subgroupDescription: ''
+      title: 'SMS Verification'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      phone:
+        name: phone
+        description: ''
+        required: true
+        example: at
+        type: string
+        custom: []
+      code:
+        name: code
+        description: ''
+        required: true
+        example: explicabo
+        type: string
+        custom: []
+    cleanBodyParameters:
+      phone: at
+      code: explicabo
     fileParameters: []
     responses: []
     responseFields: []

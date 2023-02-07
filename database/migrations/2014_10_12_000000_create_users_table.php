@@ -19,8 +19,8 @@ return new class extends Migration
             $table->tinyInteger('type')->default(\App\Models\User::TYPE_USER);
             $table->string('first_name');
             $table->string('last_name');
-            $table->string('phone');
-            $table->string('email')->nullable()->unique();
+            $table->string('phone')->unique();
+            $table->string('email')->nullable();
             $table->timestamp('email_verified_at')->nullable();
 //            $table->string('password');
             $table->rememberToken();
