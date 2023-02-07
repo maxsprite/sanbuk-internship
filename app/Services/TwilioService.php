@@ -6,6 +6,8 @@ use Aloha\Twilio\Twilio;
 
 class TwilioService
 {
+    const VERIFICATION_STATUS_APPROVED = 'approved';
+
     private Twilio|null $twilio = null;
 
     public function __construct()

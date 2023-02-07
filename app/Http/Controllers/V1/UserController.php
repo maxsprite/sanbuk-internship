@@ -6,11 +6,13 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\V1\User\SignInRequest;
 use App\Http\Requests\V1\User\SignUpRequest;
 use App\Http\Requests\V1\User\VerificationRequest;
+use App\Models\User;
 use App\Services\TwilioService;
 use App\Services\UserService;
 use Knuckles\Scribe\Attributes\Endpoint;
 use Knuckles\Scribe\Attributes\Group;
 use Knuckles\Scribe\Attributes\Subgroup;
+use Twilio\Exceptions\RestException;
 
 #[Group('User')]
 class UserController extends Controller
@@ -37,6 +39,21 @@ class UserController extends Controller
     #[Endpoint('SMS Verification')]
     public function verification(VerificationRequest $request)
     {
-        return $this->twilioService->validateVerificationCode($request->post('phone'), $request->post('code'));
+        try {
+            $twilioStatus = $this->twilioService->validateVerificationCode($request->post('phone'), $request->post('code'));
+            $result = $this->userService->phoneVerification($twilioStatus, $request->post('phone'));
+
+            if ($result === false) {
+                return [
+                    'result' => false,
+                ];
+            }
+
+            return $result;
+        } catch (RestException $exception) {
+            return [
+                'result' => false,
+            ];
+        }
     }
 }
