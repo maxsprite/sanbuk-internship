@@ -9,6 +9,7 @@ use App\Http\Requests\V1\User\VerificationRequest;
 use App\Models\User;
 use App\Services\TwilioService;
 use App\Services\UserService;
+use Knuckles\Scribe\Attributes\Authenticated;
 use Knuckles\Scribe\Attributes\Endpoint;
 use Knuckles\Scribe\Attributes\Group;
 use Knuckles\Scribe\Attributes\Subgroup;
@@ -55,5 +56,13 @@ class UserController extends Controller
                 'result' => false,
             ];
         }
+    }
+
+    #[Subgroup('Profile')]
+    #[Authenticated]
+    #[Endpoint('Get profile')]
+    public function profile()
+    {
+        return auth()->user();
     }
 }
