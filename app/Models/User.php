@@ -55,16 +55,24 @@ class User extends Authenticatable
     const STATUS_INACTIVE = 0;
     const STATUS_ACTIVE = 1;
 
+    const STATUS_LIST = [
+        self::STATUS_INACTIVE => 'Inactive',
+        self::STATUS_ACTIVE => 'Active',
+    ];
+
     /**
      * The attributes that are mass assignable.
      *
      * @var array<int, string>
      */
     protected $fillable = [
+        'status',
         'first_name',
         'last_name',
         'phone',
         'email',
+        'name',
+        'password',
     ];
 
     /**
@@ -84,11 +92,4 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-
-//    public function test1()
-//    {
-//        if ($this->type === self::TYPE_USER) {
-//
-//        }
-//    }
 }
