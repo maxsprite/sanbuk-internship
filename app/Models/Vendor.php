@@ -9,6 +9,8 @@ use Illuminate\Database\Eloquent\Model;
 /**
  * App\Models\Vendor
  *
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Experience> $experiences
+ * @property-read int|null $experiences_count
  * @property-read \Illuminate\Notifications\DatabaseNotificationCollection<int, \Illuminate\Notifications\DatabaseNotification> $notifications
  * @property-read int|null $notifications_count
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \Laravel\Sanctum\PersonalAccessToken> $tokens
