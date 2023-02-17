@@ -23,6 +23,8 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Vendor extends User
 {
+    protected $table = 'users';
+
     /**
      * The "booted" method of the model.
      *

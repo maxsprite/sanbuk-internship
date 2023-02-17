@@ -25,5 +25,10 @@ class TripTypeSeeder extends Seeder
             'status' => StatusInterface::STATUS_ACTIVE,
             'name' => 'Island trip',
         ]);
+
+        TripType::create([
+            'status' => StatusInterface::STATUS_ACTIVE,
+            'name' => 'Some trip',
+        ]);
     }
 }

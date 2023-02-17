@@ -21,6 +21,7 @@ class DatabaseSeeder extends Seeder
             TripTypeSeeder::class,
             CharterTypeSeeder::class,
             DepartureSeeder::class,
+            VendorSeeder::class,
             ExperienceSeeder::class,
         ]);
     }

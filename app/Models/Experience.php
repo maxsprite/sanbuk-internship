@@ -51,9 +51,29 @@ class Experience extends Model implements StatusInterface
         return $this->belongsTo(Vendor::class, 'vendor_id');
     }
 
+    public function type()
+    {
+        return $this->belongsTo(Type::class);
+    }
+
+    public function tripType()
+    {
+        return $this->belongsTo(TripType::class);
+    }
+
+    public function charterType()
+    {
+        return $this->belongsTo(CharterType::class);
+    }
+
+    public function departure()
+    {
+        return $this->belongsTo(Departure::class);
+    }
+
     public function packages()
     {
-        return $this->hasMany(Package::class);
+        return $this->hasMany(Package::class, 'experience_id');
     }
 
     public function scopeActiveVendor(Builder $query)

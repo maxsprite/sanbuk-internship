@@ -34,6 +34,6 @@ class Package extends Model
 
     public function experience()
     {
-        return $this->belongsTo(Experience::class, 'experience_id');
+        return $this->belongsTo(Experience::class);
     }
 }
