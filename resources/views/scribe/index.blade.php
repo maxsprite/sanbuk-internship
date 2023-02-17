@@ -66,13 +66,13 @@
                     <a href="#authenticating-requests">Authenticating requests</a>
                 </li>
                             </ul>
-                    <ul id="tocify-header-endpoints" class="tocify-header">
-                <li class="tocify-item level-1" data-unique="endpoints">
-                    <a href="#endpoints">Endpoints</a>
+                    <ul id="tocify-header-experience" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="experience">
+                    <a href="#experience">Experience</a>
                 </li>
-                                    <ul id="tocify-subheader-endpoints" class="tocify-subheader">
-                                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-v1-test-authorized-user">
-                                <a href="#endpoints-GETapi-v1-test-authorized-user">GET api/v1/test-authorized-user</a>
+                                    <ul id="tocify-subheader-experience" class="tocify-subheader">
+                                                    <li class="tocify-item level-2" data-unique="experience-GETapi-v1-experiences">
+                                <a href="#experience-GETapi-v1-experiences">GET api/v1/experiences</a>
                             </li>
                                                                         </ul>
                             </ul>
@@ -114,7 +114,7 @@
     </ul>
 
     <ul class="toc-footer" id="last-updated">
-        <li>Last updated: February 7, 2023</li>
+        <li>Last updated: February 17, 2023</li>
     </ul>
 </div>
 
@@ -132,31 +132,31 @@ You can switch the language used with the tabs at the top right (or from the nav
         <h1 id="authenticating-requests">Authenticating requests</h1>
 <p>This API is not authenticated.</p>
 
-        <h1 id="endpoints">Endpoints</h1>
+        <h1 id="experience">Experience</h1>
 
     
 
-                                <h2 id="endpoints-GETapi-v1-test-authorized-user">GET api/v1/test-authorized-user</h2>
+                                <h2 id="experience-GETapi-v1-experiences">GET api/v1/experiences</h2>
 
 <p>
 </p>
 
 
 
-<span id="example-requests-GETapi-v1-test-authorized-user">
+<span id="example-requests-GETapi-v1-experiences">
 <blockquote>Example request:</blockquote>
 
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "https://sanbuk-internship.test/api/v1/test-authorized-user" \
+    --get "https://sanbuk-internship.test/api/v1/experiences" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://sanbuk-internship.test/api/v1/test-authorized-user"
+    "https://sanbuk-internship.test/api/v1/experiences"
 );
 
 const headers = {
@@ -171,9 +171,9 @@ fetch(url, {
 
 </span>
 
-<span id="example-responses-GETapi-v1-test-authorized-user">
+<span id="example-responses-GETapi-v1-experiences">
             <blockquote>
-            <p>Example response (401):</p>
+            <p>Example response (200):</p>
         </blockquote>
                 <details class="annotation">
             <summary style="cursor: pointer;">
@@ -181,51 +181,316 @@ fetch(url, {
             </summary>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
+accept: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 59
 access-control-allow-origin: *
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;message&quot;: &quot;Unauthenticated.&quot;
+    &quot;status&quot;: 200,
+    &quot;data&quot;: [
+        {
+            &quot;id&quot;: 2,
+            &quot;status&quot;: 1,
+            &quot;vendor_id&quot;: 1,
+            &quot;type_id&quot;: 2,
+            &quot;trip_type_id&quot;: 1,
+            &quot;charter_type_id&quot;: 3,
+            &quot;departure_id&quot;: 1,
+            &quot;name&quot;: &quot;Mr. Lourdes Kilback DVM&quot;,
+            &quot;description&quot;: &quot;Ut amet id corporis. Hic est corporis dolor officia commodi minima. Et ut tenetur aut et ab animi magnam. Debitis quia dolorem est autem.&quot;,
+            &quot;created_at&quot;: &quot;2023-02-17T16:08:52.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2023-02-17T16:08:52.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 3,
+            &quot;status&quot;: 1,
+            &quot;vendor_id&quot;: 1,
+            &quot;type_id&quot;: 3,
+            &quot;trip_type_id&quot;: 3,
+            &quot;charter_type_id&quot;: 2,
+            &quot;departure_id&quot;: 3,
+            &quot;name&quot;: &quot;Dr. Timmothy Gleichner&quot;,
+            &quot;description&quot;: &quot;Fugiat maiores facere possimus autem. Corporis unde dolor provident quis a. Omnis occaecati officiis voluptatum fuga commodi sapiente. Omnis consequatur numquam labore est voluptatem at voluptas.&quot;,
+            &quot;created_at&quot;: &quot;2023-02-17T16:08:52.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2023-02-17T16:08:52.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 5,
+            &quot;status&quot;: 1,
+            &quot;vendor_id&quot;: 1,
+            &quot;type_id&quot;: 1,
+            &quot;trip_type_id&quot;: 3,
+            &quot;charter_type_id&quot;: 3,
+            &quot;departure_id&quot;: 3,
+            &quot;name&quot;: &quot;Alberta Effertz&quot;,
+            &quot;description&quot;: &quot;Facilis quia omnis et consectetur commodi. Natus consectetur cumque non incidunt et. Molestias unde molestiae dolore et cupiditate. Reprehenderit consequuntur quod aliquam qui soluta.&quot;,
+            &quot;created_at&quot;: &quot;2023-02-17T16:08:52.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2023-02-17T16:08:52.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 6,
+            &quot;status&quot;: 1,
+            &quot;vendor_id&quot;: 1,
+            &quot;type_id&quot;: 2,
+            &quot;trip_type_id&quot;: 2,
+            &quot;charter_type_id&quot;: 3,
+            &quot;departure_id&quot;: 1,
+            &quot;name&quot;: &quot;Prof. Tevin Mohr&quot;,
+            &quot;description&quot;: &quot;Atque animi explicabo et sint. Maxime consequatur quisquam suscipit dolorum ea aut minus.&quot;,
+            &quot;created_at&quot;: &quot;2023-02-17T16:08:52.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2023-02-17T16:08:52.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 7,
+            &quot;status&quot;: 1,
+            &quot;vendor_id&quot;: 1,
+            &quot;type_id&quot;: 1,
+            &quot;trip_type_id&quot;: 3,
+            &quot;charter_type_id&quot;: 1,
+            &quot;departure_id&quot;: 3,
+            &quot;name&quot;: &quot;Mr. Donato Howe DDS&quot;,
+            &quot;description&quot;: &quot;Consequuntur illo voluptatum id fugit. Aut sint quaerat iusto ratione non odit commodi dignissimos. Alias nihil at quibusdam magnam maxime facere.&quot;,
+            &quot;created_at&quot;: &quot;2023-02-17T16:08:52.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2023-02-17T16:08:52.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 19,
+            &quot;status&quot;: 1,
+            &quot;vendor_id&quot;: 1,
+            &quot;type_id&quot;: 2,
+            &quot;trip_type_id&quot;: 3,
+            &quot;charter_type_id&quot;: 1,
+            &quot;departure_id&quot;: 2,
+            &quot;name&quot;: &quot;Dr. Maxwell Kerluke II&quot;,
+            &quot;description&quot;: &quot;Ab vel est eveniet vel dolores dolor. Eligendi praesentium aliquid velit eveniet enim. Rem voluptate odit ducimus saepe atque consectetur. Rerum illum totam modi omnis animi ducimus voluptatum.&quot;,
+            &quot;created_at&quot;: &quot;2023-02-17T16:08:52.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2023-02-17T16:08:52.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 20,
+            &quot;status&quot;: 1,
+            &quot;vendor_id&quot;: 1,
+            &quot;type_id&quot;: 1,
+            &quot;trip_type_id&quot;: 1,
+            &quot;charter_type_id&quot;: 1,
+            &quot;departure_id&quot;: 3,
+            &quot;name&quot;: &quot;Kara Terry V&quot;,
+            &quot;description&quot;: &quot;Vero nulla dicta aliquid autem. Nisi perferendis autem consectetur et itaque eum impedit. Voluptas voluptas ullam asperiores distinctio. Deleniti corrupti deleniti commodi quo ex veritatis enim.&quot;,
+            &quot;created_at&quot;: &quot;2023-02-17T16:08:52.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2023-02-17T16:08:52.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 1,
+            &quot;status&quot;: 1,
+            &quot;vendor_id&quot;: 2,
+            &quot;type_id&quot;: 2,
+            &quot;trip_type_id&quot;: 3,
+            &quot;charter_type_id&quot;: 2,
+            &quot;departure_id&quot;: 2,
+            &quot;name&quot;: &quot;Miss Karianne Purdy&quot;,
+            &quot;description&quot;: &quot;Facere ea eos voluptatem ut voluptas beatae. Eveniet facere blanditiis omnis qui. Aut ad est voluptas.&quot;,
+            &quot;created_at&quot;: &quot;2023-02-17T16:08:52.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2023-02-17T16:08:52.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 4,
+            &quot;status&quot;: 1,
+            &quot;vendor_id&quot;: 2,
+            &quot;type_id&quot;: 3,
+            &quot;trip_type_id&quot;: 1,
+            &quot;charter_type_id&quot;: 2,
+            &quot;departure_id&quot;: 1,
+            &quot;name&quot;: &quot;Ms. Mafalda Heaney III&quot;,
+            &quot;description&quot;: &quot;In illum placeat iste ea provident. Doloribus veritatis voluptas in occaecati veniam. Eum quam et atque delectus eum laborum. Eius iure maiores totam vero.&quot;,
+            &quot;created_at&quot;: &quot;2023-02-17T16:08:52.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2023-02-17T16:08:52.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 8,
+            &quot;status&quot;: 1,
+            &quot;vendor_id&quot;: 2,
+            &quot;type_id&quot;: 2,
+            &quot;trip_type_id&quot;: 2,
+            &quot;charter_type_id&quot;: 3,
+            &quot;departure_id&quot;: 2,
+            &quot;name&quot;: &quot;Cindy Stiedemann&quot;,
+            &quot;description&quot;: &quot;Aut sunt necessitatibus ipsum sit rerum corrupti in aut. Repellat quaerat inventore odio. Nobis consequatur quia qui est minus quae qui iure. Voluptatem nisi ut voluptate quia.&quot;,
+            &quot;created_at&quot;: &quot;2023-02-17T16:08:52.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2023-02-17T16:08:52.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 10,
+            &quot;status&quot;: 1,
+            &quot;vendor_id&quot;: 2,
+            &quot;type_id&quot;: 3,
+            &quot;trip_type_id&quot;: 3,
+            &quot;charter_type_id&quot;: 1,
+            &quot;departure_id&quot;: 1,
+            &quot;name&quot;: &quot;Dr. Joelle Koepp&quot;,
+            &quot;description&quot;: &quot;Recusandae nobis praesentium aut modi molestiae dolores voluptas. Vel atque rem neque iure tenetur laboriosam. Sed quidem ipsa at architecto maiores odit quos.&quot;,
+            &quot;created_at&quot;: &quot;2023-02-17T16:08:52.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2023-02-17T16:08:52.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 15,
+            &quot;status&quot;: 1,
+            &quot;vendor_id&quot;: 2,
+            &quot;type_id&quot;: 2,
+            &quot;trip_type_id&quot;: 1,
+            &quot;charter_type_id&quot;: 2,
+            &quot;departure_id&quot;: 1,
+            &quot;name&quot;: &quot;Ethan Runolfsson&quot;,
+            &quot;description&quot;: &quot;Perferendis reiciendis qui rem accusantium ad. Vitae ut eaque qui quas fugiat autem consequuntur.&quot;,
+            &quot;created_at&quot;: &quot;2023-02-17T16:08:52.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2023-02-17T16:08:52.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 16,
+            &quot;status&quot;: 1,
+            &quot;vendor_id&quot;: 2,
+            &quot;type_id&quot;: 3,
+            &quot;trip_type_id&quot;: 1,
+            &quot;charter_type_id&quot;: 1,
+            &quot;departure_id&quot;: 3,
+            &quot;name&quot;: &quot;Prof. Braxton Bartell&quot;,
+            &quot;description&quot;: &quot;Dignissimos corrupti minima in animi optio non. Cumque voluptates voluptatem voluptas earum laboriosam tempore. Aut ipsum ut dolor excepturi mollitia.&quot;,
+            &quot;created_at&quot;: &quot;2023-02-17T16:08:52.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2023-02-17T16:08:52.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 18,
+            &quot;status&quot;: 1,
+            &quot;vendor_id&quot;: 2,
+            &quot;type_id&quot;: 2,
+            &quot;trip_type_id&quot;: 1,
+            &quot;charter_type_id&quot;: 3,
+            &quot;departure_id&quot;: 2,
+            &quot;name&quot;: &quot;Mr. Lisandro McKenzie&quot;,
+            &quot;description&quot;: &quot;Porro ut delectus sit et voluptatum consectetur sapiente. Debitis illo aperiam vitae quas tempore. Iusto pariatur in temporibus iste ea voluptate sit neque.&quot;,
+            &quot;created_at&quot;: &quot;2023-02-17T16:08:52.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2023-02-17T16:08:52.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 9,
+            &quot;status&quot;: 1,
+            &quot;vendor_id&quot;: 3,
+            &quot;type_id&quot;: 2,
+            &quot;trip_type_id&quot;: 1,
+            &quot;charter_type_id&quot;: 3,
+            &quot;departure_id&quot;: 2,
+            &quot;name&quot;: &quot;Ladarius Price II&quot;,
+            &quot;description&quot;: &quot;Cum tempore officiis earum est esse. Error eligendi occaecati aut consequuntur rem. Qui unde ipsum earum consectetur minus corporis ut.&quot;,
+            &quot;created_at&quot;: &quot;2023-02-17T16:08:52.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2023-02-17T16:08:52.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 11,
+            &quot;status&quot;: 1,
+            &quot;vendor_id&quot;: 3,
+            &quot;type_id&quot;: 3,
+            &quot;trip_type_id&quot;: 1,
+            &quot;charter_type_id&quot;: 2,
+            &quot;departure_id&quot;: 3,
+            &quot;name&quot;: &quot;Nathaniel Emard V&quot;,
+            &quot;description&quot;: &quot;At porro omnis pariatur blanditiis. Totam itaque saepe quas. Molestiae iste culpa debitis dolore.&quot;,
+            &quot;created_at&quot;: &quot;2023-02-17T16:08:52.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2023-02-17T16:08:52.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 12,
+            &quot;status&quot;: 1,
+            &quot;vendor_id&quot;: 3,
+            &quot;type_id&quot;: 2,
+            &quot;trip_type_id&quot;: 2,
+            &quot;charter_type_id&quot;: 3,
+            &quot;departure_id&quot;: 2,
+            &quot;name&quot;: &quot;Prof. Brannon McDermott&quot;,
+            &quot;description&quot;: &quot;Eaque ut tempore maiores dolor quos hic minus. Nulla sed molestias voluptatem et voluptas. Quia voluptatum cupiditate voluptatem ea et.&quot;,
+            &quot;created_at&quot;: &quot;2023-02-17T16:08:52.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2023-02-17T16:08:52.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 13,
+            &quot;status&quot;: 1,
+            &quot;vendor_id&quot;: 3,
+            &quot;type_id&quot;: 1,
+            &quot;trip_type_id&quot;: 1,
+            &quot;charter_type_id&quot;: 3,
+            &quot;departure_id&quot;: 2,
+            &quot;name&quot;: &quot;Hulda Muller&quot;,
+            &quot;description&quot;: &quot;Et dolores laborum voluptate cum. Dolorem atque blanditiis sed consequuntur voluptas est et iure. Cum earum alias inventore dolores fuga. Est blanditiis unde laudantium eum eaque.&quot;,
+            &quot;created_at&quot;: &quot;2023-02-17T16:08:52.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2023-02-17T16:08:52.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 14,
+            &quot;status&quot;: 1,
+            &quot;vendor_id&quot;: 3,
+            &quot;type_id&quot;: 3,
+            &quot;trip_type_id&quot;: 3,
+            &quot;charter_type_id&quot;: 1,
+            &quot;departure_id&quot;: 1,
+            &quot;name&quot;: &quot;Mozelle Hirthe&quot;,
+            &quot;description&quot;: &quot;Illum enim aspernatur eaque est odit repellat quam. Et et repellendus veritatis odio culpa quam.&quot;,
+            &quot;created_at&quot;: &quot;2023-02-17T16:08:52.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2023-02-17T16:08:52.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 17,
+            &quot;status&quot;: 1,
+            &quot;vendor_id&quot;: 3,
+            &quot;type_id&quot;: 3,
+            &quot;trip_type_id&quot;: 1,
+            &quot;charter_type_id&quot;: 2,
+            &quot;departure_id&quot;: 2,
+            &quot;name&quot;: &quot;Matteo Kling&quot;,
+            &quot;description&quot;: &quot;Et pariatur eius inventore. Rerum quasi quas tenetur labore. Maxime autem veritatis qui nulla est fuga vitae.&quot;,
+            &quot;created_at&quot;: &quot;2023-02-17T16:08:52.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2023-02-17T16:08:52.000000Z&quot;
+        }
+    ]
 }</code>
  </pre>
     </span>
-<span id="execution-results-GETapi-v1-test-authorized-user" hidden>
+<span id="execution-results-GETapi-v1-experiences" hidden>
     <blockquote>Received response<span
-                id="execution-response-status-GETapi-v1-test-authorized-user"></span>:
+                id="execution-response-status-GETapi-v1-experiences"></span>:
     </blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-v1-test-authorized-user" style="max-height: 400px;"></code></pre>
+    <pre class="json"><code id="execution-response-content-GETapi-v1-experiences" style="max-height: 400px;"></code></pre>
 </span>
-<span id="execution-error-GETapi-v1-test-authorized-user" hidden>
+<span id="execution-error-GETapi-v1-experiences" hidden>
     <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-GETapi-v1-test-authorized-user"></code></pre>
+    <pre><code id="execution-error-message-GETapi-v1-experiences"></code></pre>
 </span>
-<form id="form-GETapi-v1-test-authorized-user" data-method="GET"
-      data-path="api/v1/test-authorized-user"
+<form id="form-GETapi-v1-experiences" data-method="GET"
+      data-path="api/v1/experiences"
       data-authed="0"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('GETapi-v1-test-authorized-user', this);">
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-v1-experiences', this);">
     <h3>
         Request&nbsp;&nbsp;&nbsp;
                     <button type="button"
                     style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-v1-test-authorized-user"
-                    onclick="tryItOut('GETapi-v1-test-authorized-user');">Try it out ⚡
+                    id="btn-tryout-GETapi-v1-experiences"
+                    onclick="tryItOut('GETapi-v1-experiences');">Try it out ⚡
             </button>
             <button type="button"
                     style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-v1-test-authorized-user"
-                    onclick="cancelTryOut('GETapi-v1-test-authorized-user');" hidden>Cancel 🛑
+                    id="btn-canceltryout-GETapi-v1-experiences"
+                    onclick="cancelTryOut('GETapi-v1-experiences');" hidden>Cancel 🛑
             </button>&nbsp;&nbsp;
             <button type="submit"
                     style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-v1-test-authorized-user" hidden>Send Request 💥
+                    id="btn-executetryout-GETapi-v1-experiences" hidden>Send Request 💥
             </button>
             </h3>
             <p>
             <small class="badge badge-green">GET</small>
-            <b><code>api/v1/test-authorized-user</code></b>
+            <b><code>api/v1/experiences</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
@@ -233,7 +498,7 @@ access-control-allow-origin: *
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-               name="Content-Type"                data-endpoint="GETapi-v1-test-authorized-user"
+               name="Content-Type"                data-endpoint="GETapi-v1-experiences"
                value="application/json"
                data-component="header">
     <br>
@@ -244,7 +509,7 @@ access-control-allow-origin: *
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-               name="Accept"                data-endpoint="GETapi-v1-test-authorized-user"
+               name="Accept"                data-endpoint="GETapi-v1-experiences"
                value="application/json"
                data-component="header">
     <br>
@@ -274,10 +539,10 @@ access-control-allow-origin: *
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"first_name\": \"autem\",
-    \"last_name\": \"praesentium\",
-    \"phone\": \"perspiciatis\",
-    \"email\": \"nicole.pagac@example.net\"
+    \"first_name\": \"sint\",
+    \"last_name\": \"nemo\",
+    \"phone\": \"harum\",
+    \"email\": \"audie.harvey@example.com\"
 }"
 </code></pre></div>
 
@@ -293,10 +558,10 @@ const headers = {
 };
 
 let body = {
-    "first_name": "autem",
-    "last_name": "praesentium",
-    "phone": "perspiciatis",
-    "email": "nicole.pagac@example.net"
+    "first_name": "sint",
+    "last_name": "nemo",
+    "phone": "harum",
+    "email": "audie.harvey@example.com"
 };
 
 fetch(url, {
@@ -377,10 +642,10 @@ fetch(url, {
  &nbsp;
                 <input type="text" style="display: none"
                name="first_name"                data-endpoint="POSTapi-v1-auth-sign-up"
-               value="autem"
+               value="sint"
                data-component="body">
     <br>
-<p>Example: <code>autem</code></p>
+<p>Example: <code>sint</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>last_name</code></b>&nbsp;&nbsp;
@@ -388,10 +653,10 @@ fetch(url, {
  &nbsp;
                 <input type="text" style="display: none"
                name="last_name"                data-endpoint="POSTapi-v1-auth-sign-up"
-               value="praesentium"
+               value="nemo"
                data-component="body">
     <br>
-<p>Example: <code>praesentium</code></p>
+<p>Example: <code>nemo</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>phone</code></b>&nbsp;&nbsp;
@@ -399,10 +664,10 @@ fetch(url, {
  &nbsp;
                 <input type="text" style="display: none"
                name="phone"                data-endpoint="POSTapi-v1-auth-sign-up"
-               value="perspiciatis"
+               value="harum"
                data-component="body">
     <br>
-<p>Example: <code>perspiciatis</code></p>
+<p>Example: <code>harum</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>email</code></b>&nbsp;&nbsp;
@@ -410,10 +675,10 @@ fetch(url, {
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                name="email"                data-endpoint="POSTapi-v1-auth-sign-up"
-               value="nicole.pagac@example.net"
+               value="audie.harvey@example.com"
                data-component="body">
     <br>
-<p>Must be a valid email address. Example: <code>nicole.pagac@example.net</code></p>
+<p>Must be a valid email address. Example: <code>audie.harvey@example.com</code></p>
         </div>
         </form>
 
@@ -434,7 +699,7 @@ fetch(url, {
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"phone\": \"tenetur\"
+    \"phone\": \"voluptatem\"
 }"
 </code></pre></div>
 
@@ -450,7 +715,7 @@ const headers = {
 };
 
 let body = {
-    "phone": "tenetur"
+    "phone": "voluptatem"
 };
 
 fetch(url, {
@@ -531,10 +796,10 @@ fetch(url, {
  &nbsp;
                 <input type="text" style="display: none"
                name="phone"                data-endpoint="POSTapi-v1-auth-sign-in"
-               value="tenetur"
+               value="voluptatem"
                data-component="body">
     <br>
-<p>Example: <code>tenetur</code></p>
+<p>Example: <code>voluptatem</code></p>
         </div>
         </form>
 
@@ -555,8 +820,8 @@ fetch(url, {
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"phone\": \"sunt\",
-    \"code\": \"corrupti\"
+    \"phone\": \"labore\",
+    \"code\": \"velit\"
 }"
 </code></pre></div>
 
@@ -572,8 +837,8 @@ const headers = {
 };
 
 let body = {
-    "phone": "sunt",
-    "code": "corrupti"
+    "phone": "labore",
+    "code": "velit"
 };
 
 fetch(url, {
@@ -654,10 +919,10 @@ fetch(url, {
  &nbsp;
                 <input type="text" style="display: none"
                name="phone"                data-endpoint="POSTapi-v1-auth-verification"
-               value="sunt"
+               value="labore"
                data-component="body">
     <br>
-<p>Example: <code>sunt</code></p>
+<p>Example: <code>labore</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>code</code></b>&nbsp;&nbsp;
@@ -665,10 +930,10 @@ fetch(url, {
  &nbsp;
                 <input type="text" style="display: none"
                name="code"                data-endpoint="POSTapi-v1-auth-verification"
-               value="corrupti"
+               value="velit"
                data-component="body">
     <br>
-<p>Example: <code>corrupti</code></p>
+<p>Example: <code>velit</code></p>
         </div>
         </form>
 
