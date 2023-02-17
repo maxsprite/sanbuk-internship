@@ -14,16 +14,16 @@ return new class extends Migration
     public function up()
     {
         Schema::table('experiences', function (Blueprint $table) {
-            $table->unsignedBigInteger('type_id');
+            $table->unsignedBigInteger('type_id')->after('vendor_id');
             $table->foreign('type_id')->on('types')->references('id');
 
-            $table->unsignedBigInteger('trip_type_id');
+            $table->unsignedBigInteger('trip_type_id')->after('type_id');
             $table->foreign('trip_type_id')->on('trip_types')->references('id');
 
-            $table->unsignedBigInteger('charter_type_id');
+            $table->unsignedBigInteger('charter_type_id')->after('trip_type_id');
             $table->foreign('charter_type_id')->on('charter_types')->references('id');
 
-            $table->unsignedBigInteger('departure_id');
+            $table->unsignedBigInteger('departure_id')->after('charter_type_id');
             $table->foreign('departure_id')->on('departures')->references('id');
         });
     }

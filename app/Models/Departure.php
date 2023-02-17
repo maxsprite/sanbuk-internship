@@ -9,4 +9,9 @@ use Illuminate\Database\Eloquent\Model;
 class Departure extends Model implements StatusInterface
 {
     use HasFactory;
+
+    protected $fillable = [
+        'status',
+        'name',
+    ];
 }

@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Interfaces\StatusInterface;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -30,9 +31,20 @@ use Illuminate\Database\Eloquent\Model;
  * @method static Builder|Experience whereVendorId($value)
  * @mixin \Eloquent
  */
-class Experience extends Model
+class Experience extends Model implements StatusInterface
 {
     use HasFactory;
+
+    protected $fillable = [
+        'status',
+        'vendor_id',
+        'type_id',
+        'trip_type_id',
+        'charter_type_id',
+        'departure_id',
+        'name',
+        'description',
+    ];
 
     public function vendor()
     {

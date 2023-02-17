@@ -16,6 +16,8 @@ return new class extends Migration
         Schema::create('experiences', function (Blueprint $table) {
             $table->id();
 
+            $table->tinyInteger('status')->default(0);
+
             $table->unsignedBigInteger('vendor_id');
             $table->foreign('vendor_id')->on('users')->references('id');
 
