@@ -3,6 +3,7 @@
 namespace App\Listeners;
 
 use App\Events\UserCreated;
+use App\Mail\UserCreatedSuccessful;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
 
@@ -27,5 +28,7 @@ class SendUserCreatedEmailNotification
     public function handle(UserCreated $event)
     {
         ray('SendUserCreatedEmailNotification handle', $event, $event->user);
+        $result = \Mail::to($event->user)->queue(new UserCreatedSuccessful($event->user));
+        ray('SendUserCreatedEmailNotification send result', $result);
     }
 }

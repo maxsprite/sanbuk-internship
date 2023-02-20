@@ -186,7 +186,7 @@ fetch(url, {
 content-type: application/json
 accept: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 58
+x-ratelimit-remaining: 59
 access-control-allow-origin: *
  </code></pre></details>         <pre>
 
@@ -542,10 +542,10 @@ access-control-allow-origin: *
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"first_name\": \"nihil\",
-    \"last_name\": \"minima\",
-    \"phone\": \"dolor\",
-    \"email\": \"krystel.murray@example.net\"
+    \"first_name\": \"deleniti\",
+    \"last_name\": \"voluptatem\",
+    \"phone\": \"et\",
+    \"email\": \"powlowski.aurelio@example.net\"
 }"
 </code></pre></div>
 
@@ -561,10 +561,10 @@ const headers = {
 };
 
 let body = {
-    "first_name": "nihil",
-    "last_name": "minima",
-    "phone": "dolor",
-    "email": "krystel.murray@example.net"
+    "first_name": "deleniti",
+    "last_name": "voluptatem",
+    "phone": "et",
+    "email": "powlowski.aurelio@example.net"
 };
 
 fetch(url, {
@@ -645,10 +645,10 @@ fetch(url, {
  &nbsp;
                 <input type="text" style="display: none"
                name="first_name"                data-endpoint="POSTapi-v1-auth-sign-up"
-               value="nihil"
+               value="deleniti"
                data-component="body">
     <br>
-<p>Example: <code>nihil</code></p>
+<p>Example: <code>deleniti</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>last_name</code></b>&nbsp;&nbsp;
@@ -656,10 +656,10 @@ fetch(url, {
  &nbsp;
                 <input type="text" style="display: none"
                name="last_name"                data-endpoint="POSTapi-v1-auth-sign-up"
-               value="minima"
+               value="voluptatem"
                data-component="body">
     <br>
-<p>Example: <code>minima</code></p>
+<p>Example: <code>voluptatem</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>phone</code></b>&nbsp;&nbsp;
@@ -667,10 +667,10 @@ fetch(url, {
  &nbsp;
                 <input type="text" style="display: none"
                name="phone"                data-endpoint="POSTapi-v1-auth-sign-up"
-               value="dolor"
+               value="et"
                data-component="body">
     <br>
-<p>Example: <code>dolor</code></p>
+<p>Example: <code>et</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>email</code></b>&nbsp;&nbsp;
@@ -678,10 +678,10 @@ fetch(url, {
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                name="email"                data-endpoint="POSTapi-v1-auth-sign-up"
-               value="krystel.murray@example.net"
+               value="powlowski.aurelio@example.net"
                data-component="body">
     <br>
-<p>Must be a valid email address. Example: <code>krystel.murray@example.net</code></p>
+<p>Must be a valid email address. Example: <code>powlowski.aurelio@example.net</code></p>
         </div>
         </form>
 
@@ -702,7 +702,7 @@ fetch(url, {
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"phone\": \"iste\"
+    \"phone\": \"repudiandae\"
 }"
 </code></pre></div>
 
@@ -718,7 +718,7 @@ const headers = {
 };
 
 let body = {
-    "phone": "iste"
+    "phone": "repudiandae"
 };
 
 fetch(url, {
@@ -799,10 +799,10 @@ fetch(url, {
  &nbsp;
                 <input type="text" style="display: none"
                name="phone"                data-endpoint="POSTapi-v1-auth-sign-in"
-               value="iste"
+               value="repudiandae"
                data-component="body">
     <br>
-<p>Example: <code>iste</code></p>
+<p>Example: <code>repudiandae</code></p>
         </div>
         </form>
 
@@ -823,8 +823,8 @@ fetch(url, {
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"phone\": \"similique\",
-    \"code\": \"voluptatibus\"
+    \"phone\": \"eveniet\",
+    \"code\": \"ex\"
 }"
 </code></pre></div>
 
@@ -840,8 +840,8 @@ const headers = {
 };
 
 let body = {
-    "phone": "similique",
-    "code": "voluptatibus"
+    "phone": "eveniet",
+    "code": "ex"
 };
 
 fetch(url, {
@@ -922,10 +922,10 @@ fetch(url, {
  &nbsp;
                 <input type="text" style="display: none"
                name="phone"                data-endpoint="POSTapi-v1-auth-verification"
-               value="similique"
+               value="eveniet"
                data-component="body">
     <br>
-<p>Example: <code>similique</code></p>
+<p>Example: <code>eveniet</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>code</code></b>&nbsp;&nbsp;
@@ -933,10 +933,10 @@ fetch(url, {
  &nbsp;
                 <input type="text" style="display: none"
                name="code"                data-endpoint="POSTapi-v1-auth-verification"
-               value="voluptatibus"
+               value="ex"
                data-component="body">
     <br>
-<p>Example: <code>voluptatibus</code></p>
+<p>Example: <code>ex</code></p>
         </div>
         </form>
 
