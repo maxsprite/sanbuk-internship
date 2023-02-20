@@ -102,6 +102,9 @@
                                                                             <li class="tocify-item level-3" data-unique="user-GETapi-v1-user-profile">
                                             <a href="#user-GETapi-v1-user-profile">Get profile</a>
                                         </li>
+                                                                            <li class="tocify-item level-3" data-unique="user-DELETEapi-v1-user-profile">
+                                            <a href="#user-DELETEapi-v1-user-profile">Delete profile</a>
+                                        </li>
                                                                     </ul>
                                                                         </ul>
                             </ul>
@@ -114,7 +117,7 @@
     </ul>
 
     <ul class="toc-footer" id="last-updated">
-        <li>Last updated: February 17, 2023</li>
+        <li>Last updated: February 20, 2023</li>
     </ul>
 </div>
 
@@ -183,7 +186,7 @@ fetch(url, {
 content-type: application/json
 accept: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 59
+x-ratelimit-remaining: 58
 access-control-allow-origin: *
  </code></pre></details>         <pre>
 
@@ -191,264 +194,264 @@ access-control-allow-origin: *
     &quot;status&quot;: 200,
     &quot;data&quot;: [
         {
-            &quot;id&quot;: 2,
+            &quot;id&quot;: 1,
             &quot;status&quot;: 1,
-            &quot;vendor_id&quot;: 1,
-            &quot;type_id&quot;: 2,
-            &quot;trip_type_id&quot;: 1,
-            &quot;charter_type_id&quot;: 3,
-            &quot;departure_id&quot;: 1,
-            &quot;name&quot;: &quot;Mr. Lourdes Kilback DVM&quot;,
-            &quot;description&quot;: &quot;Ut amet id corporis. Hic est corporis dolor officia commodi minima. Et ut tenetur aut et ab animi magnam. Debitis quia dolorem est autem.&quot;,
-            &quot;created_at&quot;: &quot;2023-02-17T16:08:52.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2023-02-17T16:08:52.000000Z&quot;
+            &quot;vendor_id&quot;: 2,
+            &quot;type_id&quot;: 1,
+            &quot;trip_type_id&quot;: 3,
+            &quot;charter_type_id&quot;: 1,
+            &quot;departure_id&quot;: 3,
+            &quot;name&quot;: &quot;Rosalind Hauck MD&quot;,
+            &quot;description&quot;: &quot;Vitae cupiditate cupiditate velit voluptas. Eius fugit id ullam minus maxime. Asperiores temporibus consequatur fugit reprehenderit et deserunt nam.&quot;,
+            &quot;created_at&quot;: &quot;2023-02-20T15:20:35.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2023-02-20T15:20:35.000000Z&quot;
         },
         {
-            &quot;id&quot;: 3,
+            &quot;id&quot;: 2,
             &quot;status&quot;: 1,
             &quot;vendor_id&quot;: 1,
             &quot;type_id&quot;: 3,
             &quot;trip_type_id&quot;: 3,
+            &quot;charter_type_id&quot;: 3,
+            &quot;departure_id&quot;: 2,
+            &quot;name&quot;: &quot;Destini Glover&quot;,
+            &quot;description&quot;: &quot;Sunt aut eum non officiis qui reprehenderit. Occaecati harum ut sequi ut dolor quae nisi voluptatum. Ipsa eum sed quo molestiae asperiores quam qui cum. Tempora id sed sed aut reiciendis ratione sit.&quot;,
+            &quot;created_at&quot;: &quot;2023-02-20T15:20:35.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2023-02-20T15:20:35.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 3,
+            &quot;status&quot;: 1,
+            &quot;vendor_id&quot;: 2,
+            &quot;type_id&quot;: 3,
+            &quot;trip_type_id&quot;: 1,
             &quot;charter_type_id&quot;: 2,
+            &quot;departure_id&quot;: 2,
+            &quot;name&quot;: &quot;Kamille Torp&quot;,
+            &quot;description&quot;: &quot;Harum debitis qui ut officia tenetur vitae perspiciatis. Omnis quia animi officia voluptatem voluptatem. Qui cum eos autem consequatur. Dolorem non asperiores architecto sed quia.&quot;,
+            &quot;created_at&quot;: &quot;2023-02-20T15:20:35.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2023-02-20T15:20:35.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 4,
+            &quot;status&quot;: 1,
+            &quot;vendor_id&quot;: 1,
+            &quot;type_id&quot;: 3,
+            &quot;trip_type_id&quot;: 1,
+            &quot;charter_type_id&quot;: 1,
             &quot;departure_id&quot;: 3,
-            &quot;name&quot;: &quot;Dr. Timmothy Gleichner&quot;,
-            &quot;description&quot;: &quot;Fugiat maiores facere possimus autem. Corporis unde dolor provident quis a. Omnis occaecati officiis voluptatum fuga commodi sapiente. Omnis consequatur numquam labore est voluptatem at voluptas.&quot;,
-            &quot;created_at&quot;: &quot;2023-02-17T16:08:52.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2023-02-17T16:08:52.000000Z&quot;
+            &quot;name&quot;: &quot;Elouise Altenwerth&quot;,
+            &quot;description&quot;: &quot;Non quidem impedit voluptas velit ut. Ea eaque error sunt. Tempora similique dolor nisi debitis explicabo.&quot;,
+            &quot;created_at&quot;: &quot;2023-02-20T15:20:35.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2023-02-20T15:20:35.000000Z&quot;
         },
         {
             &quot;id&quot;: 5,
             &quot;status&quot;: 1,
             &quot;vendor_id&quot;: 1,
-            &quot;type_id&quot;: 1,
+            &quot;type_id&quot;: 2,
             &quot;trip_type_id&quot;: 3,
-            &quot;charter_type_id&quot;: 3,
-            &quot;departure_id&quot;: 3,
-            &quot;name&quot;: &quot;Alberta Effertz&quot;,
-            &quot;description&quot;: &quot;Facilis quia omnis et consectetur commodi. Natus consectetur cumque non incidunt et. Molestias unde molestiae dolore et cupiditate. Reprehenderit consequuntur quod aliquam qui soluta.&quot;,
-            &quot;created_at&quot;: &quot;2023-02-17T16:08:52.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2023-02-17T16:08:52.000000Z&quot;
+            &quot;charter_type_id&quot;: 2,
+            &quot;departure_id&quot;: 1,
+            &quot;name&quot;: &quot;Santa Gleichner&quot;,
+            &quot;description&quot;: &quot;Ipsa quos possimus dolor amet quasi mollitia impedit. Incidunt dolores sunt facilis sunt eius cum. Ut magni harum accusantium laudantium non nihil eum.&quot;,
+            &quot;created_at&quot;: &quot;2023-02-20T15:20:35.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2023-02-20T15:20:35.000000Z&quot;
         },
         {
             &quot;id&quot;: 6,
             &quot;status&quot;: 1,
-            &quot;vendor_id&quot;: 1,
+            &quot;vendor_id&quot;: 2,
             &quot;type_id&quot;: 2,
             &quot;trip_type_id&quot;: 2,
-            &quot;charter_type_id&quot;: 3,
+            &quot;charter_type_id&quot;: 2,
             &quot;departure_id&quot;: 1,
-            &quot;name&quot;: &quot;Prof. Tevin Mohr&quot;,
-            &quot;description&quot;: &quot;Atque animi explicabo et sint. Maxime consequatur quisquam suscipit dolorum ea aut minus.&quot;,
-            &quot;created_at&quot;: &quot;2023-02-17T16:08:52.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2023-02-17T16:08:52.000000Z&quot;
+            &quot;name&quot;: &quot;Mr. Hazle Larson&quot;,
+            &quot;description&quot;: &quot;Magni maiores ad est qui et id voluptatibus adipisci. Cum omnis velit beatae perferendis blanditiis quae dolore eveniet. Ut veniam eos in rerum.&quot;,
+            &quot;created_at&quot;: &quot;2023-02-20T15:20:35.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2023-02-20T15:20:35.000000Z&quot;
         },
         {
             &quot;id&quot;: 7,
             &quot;status&quot;: 1,
             &quot;vendor_id&quot;: 1,
-            &quot;type_id&quot;: 1,
-            &quot;trip_type_id&quot;: 3,
-            &quot;charter_type_id&quot;: 1,
-            &quot;departure_id&quot;: 3,
-            &quot;name&quot;: &quot;Mr. Donato Howe DDS&quot;,
-            &quot;description&quot;: &quot;Consequuntur illo voluptatum id fugit. Aut sint quaerat iusto ratione non odit commodi dignissimos. Alias nihil at quibusdam magnam maxime facere.&quot;,
-            &quot;created_at&quot;: &quot;2023-02-17T16:08:52.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2023-02-17T16:08:52.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 19,
-            &quot;status&quot;: 1,
-            &quot;vendor_id&quot;: 1,
             &quot;type_id&quot;: 2,
-            &quot;trip_type_id&quot;: 3,
-            &quot;charter_type_id&quot;: 1,
-            &quot;departure_id&quot;: 2,
-            &quot;name&quot;: &quot;Dr. Maxwell Kerluke II&quot;,
-            &quot;description&quot;: &quot;Ab vel est eveniet vel dolores dolor. Eligendi praesentium aliquid velit eveniet enim. Rem voluptate odit ducimus saepe atque consectetur. Rerum illum totam modi omnis animi ducimus voluptatum.&quot;,
-            &quot;created_at&quot;: &quot;2023-02-17T16:08:52.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2023-02-17T16:08:52.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 20,
-            &quot;status&quot;: 1,
-            &quot;vendor_id&quot;: 1,
-            &quot;type_id&quot;: 1,
             &quot;trip_type_id&quot;: 1,
             &quot;charter_type_id&quot;: 1,
-            &quot;departure_id&quot;: 3,
-            &quot;name&quot;: &quot;Kara Terry V&quot;,
-            &quot;description&quot;: &quot;Vero nulla dicta aliquid autem. Nisi perferendis autem consectetur et itaque eum impedit. Voluptas voluptas ullam asperiores distinctio. Deleniti corrupti deleniti commodi quo ex veritatis enim.&quot;,
-            &quot;created_at&quot;: &quot;2023-02-17T16:08:52.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2023-02-17T16:08:52.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 1,
-            &quot;status&quot;: 1,
-            &quot;vendor_id&quot;: 2,
-            &quot;type_id&quot;: 2,
-            &quot;trip_type_id&quot;: 3,
-            &quot;charter_type_id&quot;: 2,
             &quot;departure_id&quot;: 2,
-            &quot;name&quot;: &quot;Miss Karianne Purdy&quot;,
-            &quot;description&quot;: &quot;Facere ea eos voluptatem ut voluptas beatae. Eveniet facere blanditiis omnis qui. Aut ad est voluptas.&quot;,
-            &quot;created_at&quot;: &quot;2023-02-17T16:08:52.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2023-02-17T16:08:52.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 4,
-            &quot;status&quot;: 1,
-            &quot;vendor_id&quot;: 2,
-            &quot;type_id&quot;: 3,
-            &quot;trip_type_id&quot;: 1,
-            &quot;charter_type_id&quot;: 2,
-            &quot;departure_id&quot;: 1,
-            &quot;name&quot;: &quot;Ms. Mafalda Heaney III&quot;,
-            &quot;description&quot;: &quot;In illum placeat iste ea provident. Doloribus veritatis voluptas in occaecati veniam. Eum quam et atque delectus eum laborum. Eius iure maiores totam vero.&quot;,
-            &quot;created_at&quot;: &quot;2023-02-17T16:08:52.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2023-02-17T16:08:52.000000Z&quot;
+            &quot;name&quot;: &quot;Layne Abbott&quot;,
+            &quot;description&quot;: &quot;At autem ab ducimus possimus praesentium. Eaque sed excepturi qui.&quot;,
+            &quot;created_at&quot;: &quot;2023-02-20T15:20:35.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2023-02-20T15:20:35.000000Z&quot;
         },
         {
             &quot;id&quot;: 8,
             &quot;status&quot;: 1,
-            &quot;vendor_id&quot;: 2,
-            &quot;type_id&quot;: 2,
-            &quot;trip_type_id&quot;: 2,
-            &quot;charter_type_id&quot;: 3,
-            &quot;departure_id&quot;: 2,
-            &quot;name&quot;: &quot;Cindy Stiedemann&quot;,
-            &quot;description&quot;: &quot;Aut sunt necessitatibus ipsum sit rerum corrupti in aut. Repellat quaerat inventore odio. Nobis consequatur quia qui est minus quae qui iure. Voluptatem nisi ut voluptate quia.&quot;,
-            &quot;created_at&quot;: &quot;2023-02-17T16:08:52.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2023-02-17T16:08:52.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 10,
-            &quot;status&quot;: 1,
-            &quot;vendor_id&quot;: 2,
+            &quot;vendor_id&quot;: 1,
             &quot;type_id&quot;: 3,
-            &quot;trip_type_id&quot;: 3,
-            &quot;charter_type_id&quot;: 1,
-            &quot;departure_id&quot;: 1,
-            &quot;name&quot;: &quot;Dr. Joelle Koepp&quot;,
-            &quot;description&quot;: &quot;Recusandae nobis praesentium aut modi molestiae dolores voluptas. Vel atque rem neque iure tenetur laboriosam. Sed quidem ipsa at architecto maiores odit quos.&quot;,
-            &quot;created_at&quot;: &quot;2023-02-17T16:08:52.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2023-02-17T16:08:52.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 15,
-            &quot;status&quot;: 1,
-            &quot;vendor_id&quot;: 2,
-            &quot;type_id&quot;: 2,
-            &quot;trip_type_id&quot;: 1,
+            &quot;trip_type_id&quot;: 2,
             &quot;charter_type_id&quot;: 2,
             &quot;departure_id&quot;: 1,
-            &quot;name&quot;: &quot;Ethan Runolfsson&quot;,
-            &quot;description&quot;: &quot;Perferendis reiciendis qui rem accusantium ad. Vitae ut eaque qui quas fugiat autem consequuntur.&quot;,
-            &quot;created_at&quot;: &quot;2023-02-17T16:08:52.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2023-02-17T16:08:52.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 16,
-            &quot;status&quot;: 1,
-            &quot;vendor_id&quot;: 2,
-            &quot;type_id&quot;: 3,
-            &quot;trip_type_id&quot;: 1,
-            &quot;charter_type_id&quot;: 1,
-            &quot;departure_id&quot;: 3,
-            &quot;name&quot;: &quot;Prof. Braxton Bartell&quot;,
-            &quot;description&quot;: &quot;Dignissimos corrupti minima in animi optio non. Cumque voluptates voluptatem voluptas earum laboriosam tempore. Aut ipsum ut dolor excepturi mollitia.&quot;,
-            &quot;created_at&quot;: &quot;2023-02-17T16:08:52.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2023-02-17T16:08:52.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 18,
-            &quot;status&quot;: 1,
-            &quot;vendor_id&quot;: 2,
-            &quot;type_id&quot;: 2,
-            &quot;trip_type_id&quot;: 1,
-            &quot;charter_type_id&quot;: 3,
-            &quot;departure_id&quot;: 2,
-            &quot;name&quot;: &quot;Mr. Lisandro McKenzie&quot;,
-            &quot;description&quot;: &quot;Porro ut delectus sit et voluptatum consectetur sapiente. Debitis illo aperiam vitae quas tempore. Iusto pariatur in temporibus iste ea voluptate sit neque.&quot;,
-            &quot;created_at&quot;: &quot;2023-02-17T16:08:52.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2023-02-17T16:08:52.000000Z&quot;
+            &quot;name&quot;: &quot;Alexa Kovacek&quot;,
+            &quot;description&quot;: &quot;Autem quia velit deleniti numquam. Nostrum molestiae sed nihil. Et vel aliquam nam qui iure et. Temporibus eos facere vel omnis quia quia. Similique in ea accusantium ipsum quia.&quot;,
+            &quot;created_at&quot;: &quot;2023-02-20T15:20:35.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2023-02-20T15:20:35.000000Z&quot;
         },
         {
             &quot;id&quot;: 9,
             &quot;status&quot;: 1,
-            &quot;vendor_id&quot;: 3,
-            &quot;type_id&quot;: 2,
-            &quot;trip_type_id&quot;: 1,
-            &quot;charter_type_id&quot;: 3,
+            &quot;vendor_id&quot;: 1,
+            &quot;type_id&quot;: 1,
+            &quot;trip_type_id&quot;: 2,
+            &quot;charter_type_id&quot;: 1,
             &quot;departure_id&quot;: 2,
-            &quot;name&quot;: &quot;Ladarius Price II&quot;,
-            &quot;description&quot;: &quot;Cum tempore officiis earum est esse. Error eligendi occaecati aut consequuntur rem. Qui unde ipsum earum consectetur minus corporis ut.&quot;,
-            &quot;created_at&quot;: &quot;2023-02-17T16:08:52.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2023-02-17T16:08:52.000000Z&quot;
+            &quot;name&quot;: &quot;Theo Schmidt&quot;,
+            &quot;description&quot;: &quot;Exercitationem excepturi suscipit voluptatem asperiores nisi aut iste. Exercitationem saepe alias consequatur amet rerum. Rerum ut dolor corrupti enim eligendi omnis quo.&quot;,
+            &quot;created_at&quot;: &quot;2023-02-20T15:20:35.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2023-02-20T15:20:35.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 10,
+            &quot;status&quot;: 1,
+            &quot;vendor_id&quot;: 1,
+            &quot;type_id&quot;: 1,
+            &quot;trip_type_id&quot;: 3,
+            &quot;charter_type_id&quot;: 2,
+            &quot;departure_id&quot;: 2,
+            &quot;name&quot;: &quot;Cleora Kerluke&quot;,
+            &quot;description&quot;: &quot;Dolorem porro assumenda aut neque. Omnis velit velit eum. Voluptatibus odit omnis minus numquam mollitia. Provident eum et nihil vel possimus voluptas. Sint aut sit vitae autem animi voluptates cum.&quot;,
+            &quot;created_at&quot;: &quot;2023-02-20T15:20:35.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2023-02-20T15:20:35.000000Z&quot;
         },
         {
             &quot;id&quot;: 11,
             &quot;status&quot;: 1,
             &quot;vendor_id&quot;: 3,
             &quot;type_id&quot;: 3,
-            &quot;trip_type_id&quot;: 1,
+            &quot;trip_type_id&quot;: 2,
             &quot;charter_type_id&quot;: 2,
             &quot;departure_id&quot;: 3,
-            &quot;name&quot;: &quot;Nathaniel Emard V&quot;,
-            &quot;description&quot;: &quot;At porro omnis pariatur blanditiis. Totam itaque saepe quas. Molestiae iste culpa debitis dolore.&quot;,
-            &quot;created_at&quot;: &quot;2023-02-17T16:08:52.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2023-02-17T16:08:52.000000Z&quot;
+            &quot;name&quot;: &quot;Coy Metz&quot;,
+            &quot;description&quot;: &quot;Repellat ipsa harum vero quo repellat et. Ea adipisci reprehenderit consequatur molestiae vel iure. Omnis assumenda voluptas et aut. Veniam quasi ea dolorem necessitatibus sunt ea.&quot;,
+            &quot;created_at&quot;: &quot;2023-02-20T15:20:35.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2023-02-20T15:20:35.000000Z&quot;
         },
         {
             &quot;id&quot;: 12,
             &quot;status&quot;: 1,
-            &quot;vendor_id&quot;: 3,
-            &quot;type_id&quot;: 2,
-            &quot;trip_type_id&quot;: 2,
-            &quot;charter_type_id&quot;: 3,
+            &quot;vendor_id&quot;: 1,
+            &quot;type_id&quot;: 3,
+            &quot;trip_type_id&quot;: 1,
+            &quot;charter_type_id&quot;: 1,
             &quot;departure_id&quot;: 2,
-            &quot;name&quot;: &quot;Prof. Brannon McDermott&quot;,
-            &quot;description&quot;: &quot;Eaque ut tempore maiores dolor quos hic minus. Nulla sed molestias voluptatem et voluptas. Quia voluptatum cupiditate voluptatem ea et.&quot;,
-            &quot;created_at&quot;: &quot;2023-02-17T16:08:52.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2023-02-17T16:08:52.000000Z&quot;
+            &quot;name&quot;: &quot;Dr. Alicia Stanton&quot;,
+            &quot;description&quot;: &quot;Eos vero sint veniam et. Dolor quod sequi sunt maiores quos cumque dolores.&quot;,
+            &quot;created_at&quot;: &quot;2023-02-20T15:20:35.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2023-02-20T15:20:35.000000Z&quot;
         },
         {
             &quot;id&quot;: 13,
             &quot;status&quot;: 1,
-            &quot;vendor_id&quot;: 3,
-            &quot;type_id&quot;: 1,
-            &quot;trip_type_id&quot;: 1,
+            &quot;vendor_id&quot;: 1,
+            &quot;type_id&quot;: 2,
+            &quot;trip_type_id&quot;: 3,
             &quot;charter_type_id&quot;: 3,
-            &quot;departure_id&quot;: 2,
-            &quot;name&quot;: &quot;Hulda Muller&quot;,
-            &quot;description&quot;: &quot;Et dolores laborum voluptate cum. Dolorem atque blanditiis sed consequuntur voluptas est et iure. Cum earum alias inventore dolores fuga. Est blanditiis unde laudantium eum eaque.&quot;,
-            &quot;created_at&quot;: &quot;2023-02-17T16:08:52.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2023-02-17T16:08:52.000000Z&quot;
+            &quot;departure_id&quot;: 3,
+            &quot;name&quot;: &quot;Hillary Orn&quot;,
+            &quot;description&quot;: &quot;Nesciunt autem hic qui unde neque. Nobis et unde tempore dignissimos nostrum sed. Eos sit ducimus qui quaerat possimus aperiam necessitatibus.&quot;,
+            &quot;created_at&quot;: &quot;2023-02-20T15:20:35.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2023-02-20T15:20:35.000000Z&quot;
         },
         {
             &quot;id&quot;: 14,
             &quot;status&quot;: 1,
-            &quot;vendor_id&quot;: 3,
+            &quot;vendor_id&quot;: 1,
             &quot;type_id&quot;: 3,
             &quot;trip_type_id&quot;: 3,
+            &quot;charter_type_id&quot;: 3,
+            &quot;departure_id&quot;: 1,
+            &quot;name&quot;: &quot;Braxton Daugherty&quot;,
+            &quot;description&quot;: &quot;Voluptas dolorem eum sed culpa. Ducimus est facilis nemo facilis id repudiandae harum. Enim similique consectetur qui quia.&quot;,
+            &quot;created_at&quot;: &quot;2023-02-20T15:20:35.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2023-02-20T15:20:35.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 15,
+            &quot;status&quot;: 1,
+            &quot;vendor_id&quot;: 2,
+            &quot;type_id&quot;: 1,
+            &quot;trip_type_id&quot;: 1,
             &quot;charter_type_id&quot;: 1,
             &quot;departure_id&quot;: 1,
-            &quot;name&quot;: &quot;Mozelle Hirthe&quot;,
-            &quot;description&quot;: &quot;Illum enim aspernatur eaque est odit repellat quam. Et et repellendus veritatis odio culpa quam.&quot;,
-            &quot;created_at&quot;: &quot;2023-02-17T16:08:52.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2023-02-17T16:08:52.000000Z&quot;
+            &quot;name&quot;: &quot;Prof. Maud Auer&quot;,
+            &quot;description&quot;: &quot;Sed harum quisquam impedit et voluptatem impedit. Dolore ut ratione dolores et blanditiis. Assumenda voluptas magni ea odit esse. Quaerat debitis ut ipsum ut omnis.&quot;,
+            &quot;created_at&quot;: &quot;2023-02-20T15:20:35.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2023-02-20T15:20:35.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 16,
+            &quot;status&quot;: 1,
+            &quot;vendor_id&quot;: 2,
+            &quot;type_id&quot;: 1,
+            &quot;trip_type_id&quot;: 3,
+            &quot;charter_type_id&quot;: 3,
+            &quot;departure_id&quot;: 2,
+            &quot;name&quot;: &quot;Marty Becker&quot;,
+            &quot;description&quot;: &quot;Sunt dolor eligendi a illum est. Velit aliquam magnam ut omnis qui est. Dolorem dolorum amet error soluta expedita aliquid.&quot;,
+            &quot;created_at&quot;: &quot;2023-02-20T15:20:35.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2023-02-20T15:20:35.000000Z&quot;
         },
         {
             &quot;id&quot;: 17,
             &quot;status&quot;: 1,
+            &quot;vendor_id&quot;: 1,
+            &quot;type_id&quot;: 2,
+            &quot;trip_type_id&quot;: 1,
+            &quot;charter_type_id&quot;: 1,
+            &quot;departure_id&quot;: 1,
+            &quot;name&quot;: &quot;Talia Keebler MD&quot;,
+            &quot;description&quot;: &quot;Iure enim placeat est. Explicabo vitae itaque veritatis quidem quis vero. Autem a repellendus illum vero.&quot;,
+            &quot;created_at&quot;: &quot;2023-02-20T15:20:35.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2023-02-20T15:20:35.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 18,
+            &quot;status&quot;: 1,
             &quot;vendor_id&quot;: 3,
             &quot;type_id&quot;: 3,
-            &quot;trip_type_id&quot;: 1,
-            &quot;charter_type_id&quot;: 2,
+            &quot;trip_type_id&quot;: 3,
+            &quot;charter_type_id&quot;: 3,
             &quot;departure_id&quot;: 2,
-            &quot;name&quot;: &quot;Matteo Kling&quot;,
-            &quot;description&quot;: &quot;Et pariatur eius inventore. Rerum quasi quas tenetur labore. Maxime autem veritatis qui nulla est fuga vitae.&quot;,
-            &quot;created_at&quot;: &quot;2023-02-17T16:08:52.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2023-02-17T16:08:52.000000Z&quot;
+            &quot;name&quot;: &quot;Neha Welch DVM&quot;,
+            &quot;description&quot;: &quot;Aut est nam enim voluptas autem repellat autem. Dolores cumque et omnis dolor at pariatur voluptatem. Temporibus reprehenderit quia inventore autem. Consequatur veniam iure ea dicta nostrum.&quot;,
+            &quot;created_at&quot;: &quot;2023-02-20T15:20:35.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2023-02-20T15:20:35.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 19,
+            &quot;status&quot;: 1,
+            &quot;vendor_id&quot;: 3,
+            &quot;type_id&quot;: 3,
+            &quot;trip_type_id&quot;: 2,
+            &quot;charter_type_id&quot;: 3,
+            &quot;departure_id&quot;: 3,
+            &quot;name&quot;: &quot;Miss Karianne Bartell IV&quot;,
+            &quot;description&quot;: &quot;Quisquam nihil culpa id vel. Non voluptatem id vero voluptatem voluptatum saepe quam. Aperiam eius quisquam ex dolorum voluptates sequi. Aperiam porro laborum incidunt nihil earum quia sint.&quot;,
+            &quot;created_at&quot;: &quot;2023-02-20T15:20:35.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2023-02-20T15:20:35.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 20,
+            &quot;status&quot;: 1,
+            &quot;vendor_id&quot;: 2,
+            &quot;type_id&quot;: 1,
+            &quot;trip_type_id&quot;: 2,
+            &quot;charter_type_id&quot;: 1,
+            &quot;departure_id&quot;: 3,
+            &quot;name&quot;: &quot;Lafayette Erdman&quot;,
+            &quot;description&quot;: &quot;Modi nemo rerum similique vitae. Assumenda atque et consequatur quis. Esse aut sapiente debitis numquam. Illo laborum porro eaque natus.&quot;,
+            &quot;created_at&quot;: &quot;2023-02-20T15:20:35.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2023-02-20T15:20:35.000000Z&quot;
         }
     ]
 }</code>
@@ -539,10 +542,10 @@ access-control-allow-origin: *
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"first_name\": \"sint\",
-    \"last_name\": \"nemo\",
-    \"phone\": \"harum\",
-    \"email\": \"audie.harvey@example.com\"
+    \"first_name\": \"nihil\",
+    \"last_name\": \"minima\",
+    \"phone\": \"dolor\",
+    \"email\": \"krystel.murray@example.net\"
 }"
 </code></pre></div>
 
@@ -558,10 +561,10 @@ const headers = {
 };
 
 let body = {
-    "first_name": "sint",
-    "last_name": "nemo",
-    "phone": "harum",
-    "email": "audie.harvey@example.com"
+    "first_name": "nihil",
+    "last_name": "minima",
+    "phone": "dolor",
+    "email": "krystel.murray@example.net"
 };
 
 fetch(url, {
@@ -642,10 +645,10 @@ fetch(url, {
  &nbsp;
                 <input type="text" style="display: none"
                name="first_name"                data-endpoint="POSTapi-v1-auth-sign-up"
-               value="sint"
+               value="nihil"
                data-component="body">
     <br>
-<p>Example: <code>sint</code></p>
+<p>Example: <code>nihil</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>last_name</code></b>&nbsp;&nbsp;
@@ -653,10 +656,10 @@ fetch(url, {
  &nbsp;
                 <input type="text" style="display: none"
                name="last_name"                data-endpoint="POSTapi-v1-auth-sign-up"
-               value="nemo"
+               value="minima"
                data-component="body">
     <br>
-<p>Example: <code>nemo</code></p>
+<p>Example: <code>minima</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>phone</code></b>&nbsp;&nbsp;
@@ -664,10 +667,10 @@ fetch(url, {
  &nbsp;
                 <input type="text" style="display: none"
                name="phone"                data-endpoint="POSTapi-v1-auth-sign-up"
-               value="harum"
+               value="dolor"
                data-component="body">
     <br>
-<p>Example: <code>harum</code></p>
+<p>Example: <code>dolor</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>email</code></b>&nbsp;&nbsp;
@@ -675,10 +678,10 @@ fetch(url, {
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                name="email"                data-endpoint="POSTapi-v1-auth-sign-up"
-               value="audie.harvey@example.com"
+               value="krystel.murray@example.net"
                data-component="body">
     <br>
-<p>Must be a valid email address. Example: <code>audie.harvey@example.com</code></p>
+<p>Must be a valid email address. Example: <code>krystel.murray@example.net</code></p>
         </div>
         </form>
 
@@ -699,7 +702,7 @@ fetch(url, {
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"phone\": \"voluptatem\"
+    \"phone\": \"iste\"
 }"
 </code></pre></div>
 
@@ -715,7 +718,7 @@ const headers = {
 };
 
 let body = {
-    "phone": "voluptatem"
+    "phone": "iste"
 };
 
 fetch(url, {
@@ -796,10 +799,10 @@ fetch(url, {
  &nbsp;
                 <input type="text" style="display: none"
                name="phone"                data-endpoint="POSTapi-v1-auth-sign-in"
-               value="voluptatem"
+               value="iste"
                data-component="body">
     <br>
-<p>Example: <code>voluptatem</code></p>
+<p>Example: <code>iste</code></p>
         </div>
         </form>
 
@@ -820,8 +823,8 @@ fetch(url, {
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"phone\": \"labore\",
-    \"code\": \"velit\"
+    \"phone\": \"similique\",
+    \"code\": \"voluptatibus\"
 }"
 </code></pre></div>
 
@@ -837,8 +840,8 @@ const headers = {
 };
 
 let body = {
-    "phone": "labore",
-    "code": "velit"
+    "phone": "similique",
+    "code": "voluptatibus"
 };
 
 fetch(url, {
@@ -919,10 +922,10 @@ fetch(url, {
  &nbsp;
                 <input type="text" style="display: none"
                name="phone"                data-endpoint="POSTapi-v1-auth-verification"
-               value="labore"
+               value="similique"
                data-component="body">
     <br>
-<p>Example: <code>labore</code></p>
+<p>Example: <code>similique</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>code</code></b>&nbsp;&nbsp;
@@ -930,10 +933,10 @@ fetch(url, {
  &nbsp;
                 <input type="text" style="display: none"
                name="code"                data-endpoint="POSTapi-v1-auth-verification"
-               value="velit"
+               value="voluptatibus"
                data-component="body">
     <br>
-<p>Example: <code>velit</code></p>
+<p>Example: <code>voluptatibus</code></p>
         </div>
         </form>
 
@@ -1052,6 +1055,120 @@ access-control-allow-origin: *
                data-component="header">
     <br>
 <p>Example: <code>application/json</code></p>
+            </div>
+                        </form>
+
+                    <h2 id="user-DELETEapi-v1-user-profile">Delete profile</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-DELETEapi-v1-user-profile">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request DELETE \
+    "https://sanbuk-internship.test/api/v1/user/profile" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --header "Authorization: Bearer "</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "https://sanbuk-internship.test/api/v1/user/profile"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+    "Authorization": "Bearer ",
+};
+
+fetch(url, {
+    method: "DELETE",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-DELETEapi-v1-user-profile">
+</span>
+<span id="execution-results-DELETEapi-v1-user-profile" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-DELETEapi-v1-user-profile"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-DELETEapi-v1-user-profile" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-DELETEapi-v1-user-profile" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-DELETEapi-v1-user-profile"></code></pre>
+</span>
+<form id="form-DELETEapi-v1-user-profile" data-method="DELETE"
+      data-path="api/v1/user/profile"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('DELETEapi-v1-user-profile', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-DELETEapi-v1-user-profile"
+                    onclick="tryItOut('DELETEapi-v1-user-profile');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-DELETEapi-v1-user-profile"
+                    onclick="cancelTryOut('DELETEapi-v1-user-profile');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-DELETEapi-v1-user-profile" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-red">DELETE</small>
+            <b><code>api/v1/user/profile</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+               name="Content-Type"                data-endpoint="DELETEapi-v1-user-profile"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+               name="Accept"                data-endpoint="DELETEapi-v1-user-profile"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+               name="Authorization" class="auth-value"               data-endpoint="DELETEapi-v1-user-profile"
+               value="Bearer "
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer</code></p>
             </div>
                         </form>
 

@@ -12,6 +12,7 @@ use App\Services\UserService;
 use Knuckles\Scribe\Attributes\Authenticated;
 use Knuckles\Scribe\Attributes\Endpoint;
 use Knuckles\Scribe\Attributes\Group;
+use Knuckles\Scribe\Attributes\Header;
 use Knuckles\Scribe\Attributes\Subgroup;
 use Twilio\Exceptions\RestException;
 
@@ -64,5 +65,14 @@ class UserController extends Controller
     public function profile()
     {
         return auth()->user();
+    }
+
+    #[Subgroup('Profile')]
+    #[Authenticated]
+    #[Endpoint('Delete profile')]
+    #[Header('Authorization', 'Bearer ')]
+    public function delete()
+    {
+        return auth()->user()->delete();
     }
 }

@@ -21,6 +21,7 @@ class VendorSeeder extends Seeder
             Vendor::create([
                 'status' => StatusInterface::STATUS_ACTIVE,
                 'type' => User::TYPE_VENDOR,
+                'email' => fake()->email,
                 'name' => fake()->name,
                 'first_name' => fake()->firstName,
                 'last_name' => fake()->lastName,

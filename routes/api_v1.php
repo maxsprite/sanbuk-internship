@@ -10,7 +10,10 @@ Route::prefix('/auth')->group(function () {
     Route::post('/verification', [UserController::class, 'verification']);
 });
 
-Route::get('/user/profile', [UserController::class, 'profile'])->middleware('auth:sanctum');
+Route::prefix('/user')->name('user.')->middleware('auth:sanctum')->group(function () {
+    Route::get('/profile', [UserController::class, 'profile'])->name('profile');
+    Route::delete('/profile', [UserController::class, 'delete'])->name('profile.delete');
+});
 
 Route::prefix('/experiences')->group(function () {
     Route::get('/', [ExperienceController::class, 'index']);

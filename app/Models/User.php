@@ -3,8 +3,10 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+use App\Events\UserCreated;
 use App\Models\Interfaces\StatusInterface;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
@@ -50,7 +52,7 @@ use Laravel\Sanctum\HasApiTokens;
  */
 class User extends Authenticatable implements StatusInterface
 {
-    use HasApiTokens, HasFactory, Notifiable;
+    use HasApiTokens, HasFactory, Notifiable, SoftDeletes;
 
     const TYPE_USER = 0;
     const TYPE_VENDOR = 1;
@@ -91,5 +93,9 @@ class User extends Authenticatable implements StatusInterface
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
+    ];
+
+    protected $dispatchesEvents = [
+        'created' => UserCreated::class,
     ];
 }

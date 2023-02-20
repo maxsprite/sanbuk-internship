@@ -32,6 +32,13 @@ class Package extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'experience_id',
+        'name',
+        'price',
+        'description',
+    ];
+
     public function experience()
     {
         return $this->belongsTo(Experience::class);
