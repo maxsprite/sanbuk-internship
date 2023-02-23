@@ -6,7 +6,7 @@ use App\Events\UserCreated;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
 
-class CreateStripeCustomer
+class CreateStripeCustomer implements ShouldQueue
 {
     /**
      * Create the event listener.

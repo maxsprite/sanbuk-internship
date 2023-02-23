@@ -4,6 +4,7 @@ use App\Http\Controllers\V1\UserController;
 use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\V1\ExperienceController;
 use \App\Http\Controllers\V1\BookingController;
+use \App\Http\Controllers\V1\Booking\WebhookController;
 
 Route::prefix('/auth')->group(function () {
     Route::post('/sign-up', [UserController::class, 'signUp']);
@@ -20,8 +21,14 @@ Route::prefix('/experiences')->group(function () {
     Route::get('/', [ExperienceController::class, 'index']);
 });
 
-Route::prefix('/bookings')->middleware(['auth:sanctum'])->group(function () {
-    Route::post('/create', [BookingController::class, 'store']);
+Route::prefix('/bookings')->group(function () {
+    Route::middleware(['auth:sanctum'])->group(function () {
+        Route::post('/create', [BookingController::class, 'store']);
+    });
+
+    Route::prefix('/webhooks')->group(function () {
+         Route::any('/charge/succeeded', [WebhookController::class, 'chargeSucceeded']);
+    });
 });
 
 //Route::middleware('auth:sanctum')->get('/user', function (Request $request) {

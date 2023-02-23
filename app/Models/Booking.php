@@ -36,6 +36,7 @@ class Booking extends Model
 {
     const STATUS_INACTIVE = 0;
     const STATUS_ACTIVE = 1;
+    const STATUS_ERROR = 99;
 
     protected $casts = [
         'user_data' => 'array',
@@ -43,6 +44,7 @@ class Booking extends Model
     ];
 
     protected $fillable = [
+        'status',
         'package_id',
         'price',
         'user_data',

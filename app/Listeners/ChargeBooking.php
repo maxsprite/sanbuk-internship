@@ -3,8 +3,9 @@
 namespace App\Listeners;
 
 use App\Events\BookingCreated;
+use App\Models\Booking;
+use ErrorException;
 use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Queue\InteractsWithQueue;
 
 class ChargeBooking implements ShouldQueue
 {
@@ -20,6 +21,20 @@ class ChargeBooking implements ShouldQueue
 
     public function handle(BookingCreated $event)
     {
-        $event->booking->user->charge($event->booking->price * 100, $event->booking->user->defaultPaymentMethod()->id);
+        try {
+            $event->booking->user->charge(
+                $event->booking->price * 100,
+                $event->booking->user->defaultPaymentMethod()?->id,
+                [
+                    'metadata' => [
+                        'booking_id' => $event->booking->id,
+                    ]
+                ]
+            );
+        } catch (\Exception $exception) {
+            $event->booking->update([
+                'status' => Booking::STATUS_ERROR,
+            ]);
+        }
     }
 }
