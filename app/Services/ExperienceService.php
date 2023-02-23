@@ -12,18 +12,32 @@ class ExperienceService
         $experiences = Experience::query();
 
         if ($filterParams !== null) {
-            foreach ($filterParams as $key => $values) {
+            foreach ($filterParams as $key => $value) {
+                if ($key === 'date_from') {
+                    $experiences->with('packages')
+                        ->whereHas('packages', function (Builder $query) use ($value) {
+                            $query->whereDate('date_from', '>=', $value);
+                        });
+                }
+
+                if ($key === 'date_to') {
+                    $experiences->with('packages')
+                        ->whereHas('packages', function (Builder $query) use ($value) {
+                            $query->whereDate('date_to', '<=', $value);
+                        });
+                }
+
                 if ($key === 'type') {
                     $experiences->with('type')
-                        ->whereHas('type', function (Builder $query) use ($values) {
-                            $query->whereIn('id', $values);
+                        ->whereHas('type', function (Builder $query) use ($value) {
+                            $query->whereIn('id', $value);
                         });
                 }
 
                 if ($key === 'trip_type') {
                     $experiences->with('tripType')
-                        ->whereHas('tripType', function (Builder $query) use ($values) {
-                            $query->whereIn('id', $values);
+                        ->whereHas('tripType', function (Builder $query) use ($value) {
+                            $query->whereIn('id', $value);
                         });
                 }
             }

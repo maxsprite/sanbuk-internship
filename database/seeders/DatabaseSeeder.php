@@ -23,6 +23,7 @@ class DatabaseSeeder extends Seeder
             DepartureSeeder::class,
             VendorSeeder::class,
             ExperienceSeeder::class,
+            PackageSeeder::class,
         ]);
     }
 }

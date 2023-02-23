@@ -3,6 +3,7 @@
 use App\Http\Controllers\V1\UserController;
 use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\V1\ExperienceController;
+use \App\Http\Controllers\V1\BookingController;
 
 Route::prefix('/auth')->group(function () {
     Route::post('/sign-up', [UserController::class, 'signUp']);
@@ -17,6 +18,10 @@ Route::prefix('/user')->name('user.')->middleware('auth:sanctum')->group(functio
 
 Route::prefix('/experiences')->group(function () {
     Route::get('/', [ExperienceController::class, 'index']);
+});
+
+Route::prefix('/bookings')->middleware(['auth:sanctum'])->group(function () {
+    Route::post('/create', [BookingController::class, 'store']);
 });
 
 //Route::middleware('auth:sanctum')->get('/user', function (Request $request) {

@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Laravel\Cashier\Billable;
 use Laravel\Sanctum\HasApiTokens;
 
 /**
@@ -52,7 +53,7 @@ use Laravel\Sanctum\HasApiTokens;
  */
 class User extends Authenticatable implements StatusInterface
 {
-    use HasApiTokens, HasFactory, Notifiable, SoftDeletes;
+    use HasApiTokens, HasFactory, Notifiable, SoftDeletes, Billable;
 
     const TYPE_USER = 0;
     const TYPE_VENDOR = 1;
@@ -98,4 +99,9 @@ class User extends Authenticatable implements StatusInterface
     protected $dispatchesEvents = [
         'created' => UserCreated::class,
     ];
+
+    public function bookings()
+    {
+        return $this->hasMany(Booking::class);
+    }
 }
