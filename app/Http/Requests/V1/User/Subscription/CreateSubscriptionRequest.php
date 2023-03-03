@@ -27,7 +27,7 @@ class CreateSubscriptionRequest extends FormRequest
     public function rules()
     {
         return [
-            'stripe_price_id' => 'required|string',
+            'stripe_price_id' => 'required|string|min:6',
         ];
     }
 
@@ -36,13 +36,16 @@ class CreateSubscriptionRequest extends FormRequest
      */
     public function withValidator(Validator $validator): void
     {
-        $validator->after(function (Validator $validator) {
-            $stripeService = new StripeService();
-            try {
-                $stripeService->client->prices->retrieve($this->stripe_price_id);
-            } catch (InvalidRequestException $exception) {
-                $validator->errors()->add('stripe_price_id', $exception->getMessage());
-            }
-        });
+        if ($validator->fails() === false) {
+            $validator->after(function (Validator $validator) {
+                $stripeService = new StripeService();
+                try {
+                    ray('stripe price id', $this->stripe_price_id);
+                    $stripeService->client->prices->retrieve($this->stripe_price_id);
+                } catch (InvalidRequestException $exception) {
+                    $validator->errors()->add('stripe_price_id', $exception->getMessage());
+                }
+            });
+        }
     }
 }
