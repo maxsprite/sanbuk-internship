@@ -81,7 +81,13 @@
                     <a href="#endpoints">Endpoints</a>
                 </li>
                                     <ul id="tocify-subheader-endpoints" class="tocify-subheader">
-                                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-v1-bookings-webhooks-charge-succeeded">
+                                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-v1-products">
+                                <a href="#endpoints-GETapi-v1-products">GET api/v1/products</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="endpoints-GETapi-v1-users">
+                                <a href="#endpoints-GETapi-v1-users">GET api/v1/users</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="endpoints-GETapi-v1-bookings-webhooks-charge-succeeded">
                                 <a href="#endpoints-GETapi-v1-bookings-webhooks-charge-succeeded">GET api/v1/bookings/webhooks/charge/succeeded</a>
                             </li>
                                                                         </ul>
@@ -148,7 +154,7 @@
     </ul>
 
     <ul class="toc-footer" id="last-updated">
-        <li>Last updated: March 1, 2023</li>
+        <li>Last updated: March 3, 2023</li>
     </ul>
 </div>
 
@@ -189,7 +195,7 @@ You can switch the language used with the tabs at the top right (or from the nav
     --header "Accept: application/json" \
     --header "Authorization: Bearer " \
     --data "{
-    \"package_id\": 12
+    \"package_id\": 6
 }"
 </code></pre></div>
 
@@ -206,7 +212,7 @@ const headers = {
 };
 
 let body = {
-    "package_id": 12
+    "package_id": 6
 };
 
 fetch(url, {
@@ -298,10 +304,10 @@ fetch(url, {
  &nbsp;
                 <input type="number" style="display: none"
                name="package_id"                data-endpoint="POSTapi-v1-bookings-create"
-               value="12"
+               value="6"
                data-component="body">
     <br>
-<p>Example: <code>12</code></p>
+<p>Example: <code>6</code></p>
         </div>
         </form>
 
@@ -309,7 +315,914 @@ fetch(url, {
 
     
 
-                                <h2 id="endpoints-GETapi-v1-bookings-webhooks-charge-succeeded">GET api/v1/bookings/webhooks/charge/succeeded</h2>
+                                <h2 id="endpoints-GETapi-v1-products">GET api/v1/products</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-v1-products">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "https://sanbuk-internship.test/api/v1/products" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "https://sanbuk-internship.test/api/v1/products"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-v1-products">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary style="cursor: pointer;">
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+accept: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 59
+access-control-allow-origin: *
+ </code></pre></details>         <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;status&quot;: 200,
+    &quot;data&quot;: [
+        {
+            &quot;id&quot;: &quot;prod_NRkmOYeHDGxRIA&quot;,
+            &quot;object&quot;: &quot;product&quot;,
+            &quot;active&quot;: true,
+            &quot;attributes&quot;: [],
+            &quot;created&quot;: 1677683304,
+            &quot;default_price&quot;: &quot;price_1MgrGXDiYpPFLbtRtfbeygeb&quot;,
+            &quot;description&quot;: null,
+            &quot;images&quot;: [],
+            &quot;livemode&quot;: false,
+            &quot;metadata&quot;: [],
+            &quot;name&quot;: &quot;Sanbuk premium package&quot;,
+            &quot;package_dimensions&quot;: null,
+            &quot;shippable&quot;: null,
+            &quot;statement_descriptor&quot;: null,
+            &quot;tax_code&quot;: null,
+            &quot;type&quot;: &quot;service&quot;,
+            &quot;unit_label&quot;: null,
+            &quot;updated&quot;: 1677683305,
+            &quot;url&quot;: null
+        },
+        {
+            &quot;id&quot;: &quot;prod_NRklmQgGEJsA9U&quot;,
+            &quot;object&quot;: &quot;product&quot;,
+            &quot;active&quot;: true,
+            &quot;attributes&quot;: [],
+            &quot;created&quot;: 1677683274,
+            &quot;default_price&quot;: &quot;price_1MgrG2DiYpPFLbtRfNFfI5HU&quot;,
+            &quot;description&quot;: null,
+            &quot;images&quot;: [],
+            &quot;livemode&quot;: false,
+            &quot;metadata&quot;: [],
+            &quot;name&quot;: &quot;Sanbuk basic package&quot;,
+            &quot;package_dimensions&quot;: null,
+            &quot;shippable&quot;: null,
+            &quot;statement_descriptor&quot;: null,
+            &quot;tax_code&quot;: null,
+            &quot;type&quot;: &quot;service&quot;,
+            &quot;unit_label&quot;: null,
+            &quot;updated&quot;: 1677683275,
+            &quot;url&quot;: null
+        },
+        {
+            &quot;id&quot;: &quot;prod_NPVSyHABOR2DMO&quot;,
+            &quot;object&quot;: &quot;product&quot;,
+            &quot;active&quot;: true,
+            &quot;attributes&quot;: [],
+            &quot;created&quot;: 1677165041,
+            &quot;default_price&quot;: &quot;price_1MegRRDiYpPFLbtRWME85g4p&quot;,
+            &quot;description&quot;: &quot;test&quot;,
+            &quot;images&quot;: [],
+            &quot;livemode&quot;: false,
+            &quot;metadata&quot;: [],
+            &quot;name&quot;: &quot;Package 1&quot;,
+            &quot;package_dimensions&quot;: null,
+            &quot;shippable&quot;: null,
+            &quot;statement_descriptor&quot;: null,
+            &quot;tax_code&quot;: null,
+            &quot;type&quot;: &quot;service&quot;,
+            &quot;unit_label&quot;: null,
+            &quot;updated&quot;: 1677165042,
+            &quot;url&quot;: null
+        },
+        {
+            &quot;id&quot;: &quot;prod_NC2omWlyvmRO5i&quot;,
+            &quot;object&quot;: &quot;product&quot;,
+            &quot;active&quot;: true,
+            &quot;attributes&quot;: [],
+            &quot;created&quot;: 1674060150,
+            &quot;default_price&quot;: &quot;price_1MReiZDiYpPFLbtRKQUqFyM3&quot;,
+            &quot;description&quot;: null,
+            &quot;images&quot;: [],
+            &quot;livemode&quot;: false,
+            &quot;metadata&quot;: [],
+            &quot;name&quot;: &quot;Standard package&quot;,
+            &quot;package_dimensions&quot;: null,
+            &quot;shippable&quot;: null,
+            &quot;statement_descriptor&quot;: null,
+            &quot;tax_code&quot;: null,
+            &quot;type&quot;: &quot;service&quot;,
+            &quot;unit_label&quot;: null,
+            &quot;updated&quot;: 1674060151,
+            &quot;url&quot;: null
+        },
+        {
+            &quot;id&quot;: &quot;prod_NC2gbglxx5lWzY&quot;,
+            &quot;object&quot;: &quot;product&quot;,
+            &quot;active&quot;: true,
+            &quot;attributes&quot;: [],
+            &quot;created&quot;: 1674059682,
+            &quot;default_price&quot;: &quot;price_1MegSvDiYpPFLbtRPm4VP7T0&quot;,
+            &quot;description&quot;: null,
+            &quot;images&quot;: [],
+            &quot;livemode&quot;: false,
+            &quot;metadata&quot;: [],
+            &quot;name&quot;: &quot;Premium&quot;,
+            &quot;package_dimensions&quot;: null,
+            &quot;shippable&quot;: null,
+            &quot;statement_descriptor&quot;: null,
+            &quot;tax_code&quot;: null,
+            &quot;type&quot;: &quot;service&quot;,
+            &quot;unit_label&quot;: null,
+            &quot;updated&quot;: 1677165134,
+            &quot;url&quot;: null
+        },
+        {
+            &quot;id&quot;: &quot;prod_NC2gshnv5idU8R&quot;,
+            &quot;object&quot;: &quot;product&quot;,
+            &quot;active&quot;: true,
+            &quot;attributes&quot;: [],
+            &quot;created&quot;: 1674059669,
+            &quot;default_price&quot;: null,
+            &quot;description&quot;: null,
+            &quot;images&quot;: [],
+            &quot;livemode&quot;: false,
+            &quot;metadata&quot;: [],
+            &quot;name&quot;: &quot;Basic p1&quot;,
+            &quot;package_dimensions&quot;: null,
+            &quot;shippable&quot;: null,
+            &quot;statement_descriptor&quot;: null,
+            &quot;tax_code&quot;: null,
+            &quot;type&quot;: &quot;service&quot;,
+            &quot;unit_label&quot;: null,
+            &quot;updated&quot;: 1674059915,
+            &quot;url&quot;: null
+        }
+    ]
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-v1-products" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-v1-products"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-v1-products" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETapi-v1-products" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-v1-products"></code></pre>
+</span>
+<form id="form-GETapi-v1-products" data-method="GET"
+      data-path="api/v1/products"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-v1-products', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-v1-products"
+                    onclick="tryItOut('GETapi-v1-products');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-v1-products"
+                    onclick="cancelTryOut('GETapi-v1-products');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-v1-products" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/v1/products</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+               name="Content-Type"                data-endpoint="GETapi-v1-products"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+               name="Accept"                data-endpoint="GETapi-v1-products"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        </form>
+
+                    <h2 id="endpoints-GETapi-v1-users">GET api/v1/users</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-v1-users">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "https://sanbuk-internship.test/api/v1/users" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "https://sanbuk-internship.test/api/v1/users"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-v1-users">
+            <blockquote>
+            <p>Example response (500):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary style="cursor: pointer;">
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+accept: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 58
+access-control-allow-origin: *
+ </code></pre></details>         <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;status&quot;: 500,
+    &quot;message&quot;: &quot;Undefined array key 1&quot;,
+    &quot;exception&quot;: &quot;ErrorException&quot;,
+    &quot;file&quot;: &quot;/Users/maxim/Sites/sanbuk-internship/app/Http/Resources/V1/UserResource.php&quot;,
+    &quot;line&quot;: 21,
+    &quot;trace&quot;: [
+        {
+            &quot;file&quot;: &quot;/Users/maxim/Sites/sanbuk-internship/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php&quot;,
+            &quot;line&quot;: 266,
+            &quot;function&quot;: &quot;handleError&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Bootstrap\\HandleExceptions&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/maxim/Sites/sanbuk-internship/app/Http/Resources/V1/UserResource.php&quot;,
+            &quot;line&quot;: 21,
+            &quot;function&quot;: &quot;Illuminate\\Foundation\\Bootstrap\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Bootstrap\\HandleExceptions&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/maxim/Sites/sanbuk-internship/vendor/laravel/framework/src/Illuminate/Collections/HigherOrderCollectionProxy.php&quot;,
+            &quot;line&quot;: 60,
+            &quot;function&quot;: &quot;toArray&quot;,
+            &quot;class&quot;: &quot;App\\Http\\Resources\\V1\\UserResource&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;function&quot;: &quot;Illuminate\\Support\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Support\\HigherOrderCollectionProxy&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/maxim/Sites/sanbuk-internship/vendor/laravel/framework/src/Illuminate/Collections/Arr.php&quot;,
+            &quot;line&quot;: 560,
+            &quot;function&quot;: &quot;array_map&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/maxim/Sites/sanbuk-internship/vendor/laravel/framework/src/Illuminate/Collections/Collection.php&quot;,
+            &quot;line&quot;: 774,
+            &quot;function&quot;: &quot;map&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Support\\Arr&quot;,
+            &quot;type&quot;: &quot;::&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/maxim/Sites/sanbuk-internship/vendor/laravel/framework/src/Illuminate/Collections/HigherOrderCollectionProxy.php&quot;,
+            &quot;line&quot;: 59,
+            &quot;function&quot;: &quot;map&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Support\\Collection&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/maxim/Sites/sanbuk-internship/vendor/laravel/framework/src/Illuminate/Http/Resources/Json/ResourceCollection.php&quot;,
+            &quot;line&quot;: 101,
+            &quot;function&quot;: &quot;__call&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Support\\HigherOrderCollectionProxy&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/maxim/Sites/sanbuk-internship/app/Http/Resources/V1/UserCollection.php&quot;,
+            &quot;line&quot;: 17,
+            &quot;function&quot;: &quot;toArray&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Http\\Resources\\Json\\ResourceCollection&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/maxim/Sites/sanbuk-internship/vendor/laravel/framework/src/Illuminate/Http/Resources/Json/JsonResource.php&quot;,
+            &quot;line&quot;: 94,
+            &quot;function&quot;: &quot;toArray&quot;,
+            &quot;class&quot;: &quot;App\\Http\\Resources\\V1\\UserCollection&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/maxim/Sites/sanbuk-internship/vendor/laravel/framework/src/Illuminate/Http/Resources/Json/ResourceResponse.php&quot;,
+            &quot;line&quot;: 39,
+            &quot;function&quot;: &quot;resolve&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Http\\Resources\\Json\\JsonResource&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/maxim/Sites/sanbuk-internship/vendor/laravel/framework/src/Illuminate/Http/Resources/Json/JsonResource.php&quot;,
+            &quot;line&quot;: 231,
+            &quot;function&quot;: &quot;toResponse&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Http\\Resources\\Json\\ResourceResponse&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/maxim/Sites/sanbuk-internship/vendor/laravel/framework/src/Illuminate/Http/Resources/Json/ResourceCollection.php&quot;,
+            &quot;line&quot;: 116,
+            &quot;function&quot;: &quot;toResponse&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Http\\Resources\\Json\\JsonResource&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/maxim/Sites/sanbuk-internship/vendor/laravel/framework/src/Illuminate/Routing/Router.php&quot;,
+            &quot;line&quot;: 888,
+            &quot;function&quot;: &quot;toResponse&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Http\\Resources\\Json\\ResourceCollection&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/maxim/Sites/sanbuk-internship/vendor/laravel/framework/src/Illuminate/Routing/Router.php&quot;,
+            &quot;line&quot;: 875,
+            &quot;function&quot;: &quot;toResponse&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
+            &quot;type&quot;: &quot;::&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/maxim/Sites/sanbuk-internship/vendor/laravel/framework/src/Illuminate/Routing/Router.php&quot;,
+            &quot;line&quot;: 797,
+            &quot;function&quot;: &quot;prepareResponse&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/maxim/Sites/sanbuk-internship/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 141,
+            &quot;function&quot;: &quot;Illuminate\\Routing\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/maxim/Sites/sanbuk-internship/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php&quot;,
+            &quot;line&quot;: 50,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/maxim/Sites/sanbuk-internship/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\SubstituteBindings&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/maxim/Sites/sanbuk-internship/app/Http/Middleware/JsonMiddleware.php&quot;,
+            &quot;line&quot;: 37,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/maxim/Sites/sanbuk-internship/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;App\\Http\\Middleware\\JsonMiddleware&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/maxim/Sites/sanbuk-internship/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php&quot;,
+            &quot;line&quot;: 126,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/maxim/Sites/sanbuk-internship/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php&quot;,
+            &quot;line&quot;: 92,
+            &quot;function&quot;: &quot;handleRequest&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/maxim/Sites/sanbuk-internship/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php&quot;,
+            &quot;line&quot;: 54,
+            &quot;function&quot;: &quot;handleRequestUsingNamedLimiter&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/maxim/Sites/sanbuk-internship/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/maxim/Sites/sanbuk-internship/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 116,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/maxim/Sites/sanbuk-internship/vendor/laravel/framework/src/Illuminate/Routing/Router.php&quot;,
+            &quot;line&quot;: 797,
+            &quot;function&quot;: &quot;then&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/maxim/Sites/sanbuk-internship/vendor/laravel/framework/src/Illuminate/Routing/Router.php&quot;,
+            &quot;line&quot;: 776,
+            &quot;function&quot;: &quot;runRouteWithinStack&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/maxim/Sites/sanbuk-internship/vendor/laravel/framework/src/Illuminate/Routing/Router.php&quot;,
+            &quot;line&quot;: 740,
+            &quot;function&quot;: &quot;runRoute&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/maxim/Sites/sanbuk-internship/vendor/laravel/framework/src/Illuminate/Routing/Router.php&quot;,
+            &quot;line&quot;: 729,
+            &quot;function&quot;: &quot;dispatchToRoute&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/maxim/Sites/sanbuk-internship/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php&quot;,
+            &quot;line&quot;: 190,
+            &quot;function&quot;: &quot;dispatch&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/maxim/Sites/sanbuk-internship/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 141,
+            &quot;function&quot;: &quot;Illuminate\\Foundation\\Http\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/maxim/Sites/sanbuk-internship/vendor/livewire/livewire/src/DisableBrowserCache.php&quot;,
+            &quot;line&quot;: 19,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/maxim/Sites/sanbuk-internship/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Livewire\\DisableBrowserCache&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/maxim/Sites/sanbuk-internship/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php&quot;,
+            &quot;line&quot;: 21,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/maxim/Sites/sanbuk-internship/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php&quot;,
+            &quot;line&quot;: 31,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/maxim/Sites/sanbuk-internship/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/maxim/Sites/sanbuk-internship/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php&quot;,
+            &quot;line&quot;: 21,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/maxim/Sites/sanbuk-internship/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php&quot;,
+            &quot;line&quot;: 40,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/maxim/Sites/sanbuk-internship/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TrimStrings&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/maxim/Sites/sanbuk-internship/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php&quot;,
+            &quot;line&quot;: 27,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/maxim/Sites/sanbuk-internship/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/maxim/Sites/sanbuk-internship/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php&quot;,
+            &quot;line&quot;: 86,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/maxim/Sites/sanbuk-internship/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/maxim/Sites/sanbuk-internship/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php&quot;,
+            &quot;line&quot;: 62,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/maxim/Sites/sanbuk-internship/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Http\\Middleware\\HandleCors&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/maxim/Sites/sanbuk-internship/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php&quot;,
+            &quot;line&quot;: 39,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/maxim/Sites/sanbuk-internship/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Http\\Middleware\\TrustProxies&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/maxim/Sites/sanbuk-internship/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 116,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/maxim/Sites/sanbuk-internship/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php&quot;,
+            &quot;line&quot;: 165,
+            &quot;function&quot;: &quot;then&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/maxim/Sites/sanbuk-internship/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php&quot;,
+            &quot;line&quot;: 134,
+            &quot;function&quot;: &quot;sendRequestThroughRouter&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/maxim/Sites/sanbuk-internship/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php&quot;,
+            &quot;line&quot;: 299,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/maxim/Sites/sanbuk-internship/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php&quot;,
+            &quot;line&quot;: 287,
+            &quot;function&quot;: &quot;callLaravelOrLumenRoute&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/maxim/Sites/sanbuk-internship/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php&quot;,
+            &quot;line&quot;: 92,
+            &quot;function&quot;: &quot;makeApiCall&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/maxim/Sites/sanbuk-internship/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php&quot;,
+            &quot;line&quot;: 45,
+            &quot;function&quot;: &quot;makeResponseCall&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/maxim/Sites/sanbuk-internship/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php&quot;,
+            &quot;line&quot;: 35,
+            &quot;function&quot;: &quot;makeResponseCallIfConditionsPass&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/maxim/Sites/sanbuk-internship/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php&quot;,
+            &quot;line&quot;: 209,
+            &quot;function&quot;: &quot;__invoke&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/maxim/Sites/sanbuk-internship/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php&quot;,
+            &quot;line&quot;: 163,
+            &quot;function&quot;: &quot;iterateThroughStrategies&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/maxim/Sites/sanbuk-internship/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php&quot;,
+            &quot;line&quot;: 95,
+            &quot;function&quot;: &quot;fetchResponses&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/maxim/Sites/sanbuk-internship/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php&quot;,
+            &quot;line&quot;: 122,
+            &quot;function&quot;: &quot;processRoute&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/maxim/Sites/sanbuk-internship/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php&quot;,
+            &quot;line&quot;: 69,
+            &quot;function&quot;: &quot;extractEndpointsInfoFromLaravelApp&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/maxim/Sites/sanbuk-internship/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php&quot;,
+            &quot;line&quot;: 47,
+            &quot;function&quot;: &quot;extractEndpointsInfoAndWriteToDisk&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/maxim/Sites/sanbuk-internship/vendor/knuckleswtf/scribe/src/Commands/GenerateDocumentation.php&quot;,
+            &quot;line&quot;: 51,
+            &quot;function&quot;: &quot;get&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/maxim/Sites/sanbuk-internship/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php&quot;,
+            &quot;line&quot;: 36,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Commands\\GenerateDocumentation&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/maxim/Sites/sanbuk-internship/vendor/laravel/framework/src/Illuminate/Container/Util.php&quot;,
+            &quot;line&quot;: 41,
+            &quot;function&quot;: &quot;Illuminate\\Container\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
+            &quot;type&quot;: &quot;::&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/maxim/Sites/sanbuk-internship/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php&quot;,
+            &quot;line&quot;: 93,
+            &quot;function&quot;: &quot;unwrapIfClosure&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\Util&quot;,
+            &quot;type&quot;: &quot;::&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/maxim/Sites/sanbuk-internship/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php&quot;,
+            &quot;line&quot;: 35,
+            &quot;function&quot;: &quot;callBoundMethod&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
+            &quot;type&quot;: &quot;::&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/maxim/Sites/sanbuk-internship/vendor/laravel/framework/src/Illuminate/Container/Container.php&quot;,
+            &quot;line&quot;: 661,
+            &quot;function&quot;: &quot;call&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
+            &quot;type&quot;: &quot;::&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/maxim/Sites/sanbuk-internship/vendor/laravel/framework/src/Illuminate/Console/Command.php&quot;,
+            &quot;line&quot;: 183,
+            &quot;function&quot;: &quot;call&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\Container&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/maxim/Sites/sanbuk-internship/vendor/symfony/console/Command/Command.php&quot;,
+            &quot;line&quot;: 312,
+            &quot;function&quot;: &quot;execute&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Console\\Command&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/maxim/Sites/sanbuk-internship/vendor/laravel/framework/src/Illuminate/Console/Command.php&quot;,
+            &quot;line&quot;: 152,
+            &quot;function&quot;: &quot;run&quot;,
+            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Command\\Command&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/maxim/Sites/sanbuk-internship/vendor/symfony/console/Application.php&quot;,
+            &quot;line&quot;: 1022,
+            &quot;function&quot;: &quot;run&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Console\\Command&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/maxim/Sites/sanbuk-internship/vendor/symfony/console/Application.php&quot;,
+            &quot;line&quot;: 314,
+            &quot;function&quot;: &quot;doRunCommand&quot;,
+            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/maxim/Sites/sanbuk-internship/vendor/symfony/console/Application.php&quot;,
+            &quot;line&quot;: 168,
+            &quot;function&quot;: &quot;doRun&quot;,
+            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/maxim/Sites/sanbuk-internship/vendor/laravel/framework/src/Illuminate/Console/Application.php&quot;,
+            &quot;line&quot;: 102,
+            &quot;function&quot;: &quot;run&quot;,
+            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/maxim/Sites/sanbuk-internship/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php&quot;,
+            &quot;line&quot;: 155,
+            &quot;function&quot;: &quot;run&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Console\\Application&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/maxim/Sites/sanbuk-internship/artisan&quot;,
+            &quot;line&quot;: 35,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Console\\Kernel&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        }
+    ]
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-v1-users" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-v1-users"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-v1-users" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETapi-v1-users" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-v1-users"></code></pre>
+</span>
+<form id="form-GETapi-v1-users" data-method="GET"
+      data-path="api/v1/users"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-v1-users', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-v1-users"
+                    onclick="tryItOut('GETapi-v1-users');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-v1-users"
+                    onclick="cancelTryOut('GETapi-v1-users');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-v1-users" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/v1/users</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+               name="Content-Type"                data-endpoint="GETapi-v1-users"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+               name="Accept"                data-endpoint="GETapi-v1-users"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        </form>
+
+                    <h2 id="endpoints-GETapi-v1-bookings-webhooks-charge-succeeded">GET api/v1/bookings/webhooks/charge/succeeded</h2>
 
 <p>
 </p>
@@ -356,7 +1269,7 @@ fetch(url, {
 content-type: application/json
 accept: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 58
+x-ratelimit-remaining: 56
 access-control-allow-origin: *
  </code></pre></details>         <pre>
 
@@ -981,7 +1894,7 @@ fetch(url, {
 content-type: application/json
 accept: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 59
+x-ratelimit-remaining: 57
 access-control-allow-origin: *
  </code></pre></details>         <pre>
 
@@ -1337,10 +2250,10 @@ access-control-allow-origin: *
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"first_name\": \"voluptatibus\",
-    \"last_name\": \"asperiores\",
-    \"phone\": \"suscipit\",
-    \"email\": \"dulce89@example.org\"
+    \"first_name\": \"maxime\",
+    \"last_name\": \"omnis\",
+    \"phone\": \"error\",
+    \"email\": \"bleannon@example.net\"
 }"
 </code></pre></div>
 
@@ -1356,10 +2269,10 @@ const headers = {
 };
 
 let body = {
-    "first_name": "voluptatibus",
-    "last_name": "asperiores",
-    "phone": "suscipit",
-    "email": "dulce89@example.org"
+    "first_name": "maxime",
+    "last_name": "omnis",
+    "phone": "error",
+    "email": "bleannon@example.net"
 };
 
 fetch(url, {
@@ -1440,10 +2353,10 @@ fetch(url, {
  &nbsp;
                 <input type="text" style="display: none"
                name="first_name"                data-endpoint="POSTapi-v1-auth-sign-up"
-               value="voluptatibus"
+               value="maxime"
                data-component="body">
     <br>
-<p>Example: <code>voluptatibus</code></p>
+<p>Example: <code>maxime</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>last_name</code></b>&nbsp;&nbsp;
@@ -1451,10 +2364,10 @@ fetch(url, {
  &nbsp;
                 <input type="text" style="display: none"
                name="last_name"                data-endpoint="POSTapi-v1-auth-sign-up"
-               value="asperiores"
+               value="omnis"
                data-component="body">
     <br>
-<p>Example: <code>asperiores</code></p>
+<p>Example: <code>omnis</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>phone</code></b>&nbsp;&nbsp;
@@ -1462,10 +2375,10 @@ fetch(url, {
  &nbsp;
                 <input type="text" style="display: none"
                name="phone"                data-endpoint="POSTapi-v1-auth-sign-up"
-               value="suscipit"
+               value="error"
                data-component="body">
     <br>
-<p>Example: <code>suscipit</code></p>
+<p>Example: <code>error</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>email</code></b>&nbsp;&nbsp;
@@ -1473,10 +2386,10 @@ fetch(url, {
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                name="email"                data-endpoint="POSTapi-v1-auth-sign-up"
-               value="dulce89@example.org"
+               value="bleannon@example.net"
                data-component="body">
     <br>
-<p>Must be a valid email address. Example: <code>dulce89@example.org</code></p>
+<p>Must be a valid email address. Example: <code>bleannon@example.net</code></p>
         </div>
         </form>
 
@@ -1497,7 +2410,7 @@ fetch(url, {
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"phone\": \"quibusdam\"
+    \"phone\": \"at\"
 }"
 </code></pre></div>
 
@@ -1513,7 +2426,7 @@ const headers = {
 };
 
 let body = {
-    "phone": "quibusdam"
+    "phone": "at"
 };
 
 fetch(url, {
@@ -1594,10 +2507,10 @@ fetch(url, {
  &nbsp;
                 <input type="text" style="display: none"
                name="phone"                data-endpoint="POSTapi-v1-auth-sign-in"
-               value="quibusdam"
+               value="at"
                data-component="body">
     <br>
-<p>Example: <code>quibusdam</code></p>
+<p>Example: <code>at</code></p>
         </div>
         </form>
 
@@ -1618,8 +2531,8 @@ fetch(url, {
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"phone\": \"aliquid\",
-    \"code\": \"possimus\"
+    \"phone\": \"quae\",
+    \"code\": \"quia\"
 }"
 </code></pre></div>
 
@@ -1635,8 +2548,8 @@ const headers = {
 };
 
 let body = {
-    "phone": "aliquid",
-    "code": "possimus"
+    "phone": "quae",
+    "code": "quia"
 };
 
 fetch(url, {
@@ -1717,10 +2630,10 @@ fetch(url, {
  &nbsp;
                 <input type="text" style="display: none"
                name="phone"                data-endpoint="POSTapi-v1-auth-verification"
-               value="aliquid"
+               value="quae"
                data-component="body">
     <br>
-<p>Example: <code>aliquid</code></p>
+<p>Example: <code>quae</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>code</code></b>&nbsp;&nbsp;
@@ -1728,10 +2641,10 @@ fetch(url, {
  &nbsp;
                 <input type="text" style="display: none"
                name="code"                data-endpoint="POSTapi-v1-auth-verification"
-               value="possimus"
+               value="quia"
                data-component="body">
     <br>
-<p>Example: <code>possimus</code></p>
+<p>Example: <code>quia</code></p>
         </div>
         </form>
 
@@ -1752,7 +2665,8 @@ fetch(url, {
     <pre><code class="language-bash">curl --request GET \
     --get "https://sanbuk-internship.test/api/v1/user/profile" \
     --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
+    --header "Accept: application/json" \
+    --header "Authorization: Bearer "</code></pre></div>
 
 
 <div class="javascript-example">
@@ -1763,6 +2677,7 @@ fetch(url, {
 const headers = {
     "Content-Type": "application/json",
     "Accept": "application/json",
+    "Authorization": "Bearer ",
 };
 
 fetch(url, {
@@ -1850,6 +2765,17 @@ access-control-allow-origin: *
                data-component="header">
     <br>
 <p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+               name="Authorization" class="auth-value"               data-endpoint="GETapi-v1-user-profile"
+               value="Bearer "
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer</code></p>
             </div>
                         </form>
 
@@ -1987,7 +2913,7 @@ fetch(url, {
     --header "Accept: application/json" \
     --header "Authorization: Bearer " \
     --data "{
-    \"stripe_price_id\": \"consequatur\"
+    \"stripe_price_id\": \"cqspylpwirmmjmisagcdtjgvphszbrllowhxxzvktn\"
 }"
 </code></pre></div>
 
@@ -2004,7 +2930,7 @@ const headers = {
 };
 
 let body = {
-    "stripe_price_id": "consequatur"
+    "stripe_price_id": "cqspylpwirmmjmisagcdtjgvphszbrllowhxxzvktn"
 };
 
 fetch(url, {
@@ -2096,10 +3022,10 @@ fetch(url, {
  &nbsp;
                 <input type="text" style="display: none"
                name="stripe_price_id"                data-endpoint="POSTapi-v1-user-subscription-create"
-               value="consequatur"
+               value="cqspylpwirmmjmisagcdtjgvphszbrllowhxxzvktn"
                data-component="body">
     <br>
-<p>Example: <code>consequatur</code></p>
+<p>Must be at least 6 characters. Example: <code>cqspylpwirmmjmisagcdtjgvphszbrllowhxxzvktn</code></p>
         </div>
         </form>
 
@@ -2122,7 +3048,7 @@ fetch(url, {
     --header "Accept: application/json" \
     --header "Authorization: Bearer " \
     --data "{
-    \"stripe_price_id\": \"pariatur\"
+    \"stripe_price_id\": \"ykilsejrtxcuejcjljmrqqtwbltwyavgz\"
 }"
 </code></pre></div>
 
@@ -2139,7 +3065,7 @@ const headers = {
 };
 
 let body = {
-    "stripe_price_id": "pariatur"
+    "stripe_price_id": "ykilsejrtxcuejcjljmrqqtwbltwyavgz"
 };
 
 fetch(url, {
@@ -2231,10 +3157,10 @@ fetch(url, {
  &nbsp;
                 <input type="text" style="display: none"
                name="stripe_price_id"                data-endpoint="PATCHapi-v1-user-subscription-update"
-               value="pariatur"
+               value="ykilsejrtxcuejcjljmrqqtwbltwyavgz"
                data-component="body">
     <br>
-<p>Example: <code>pariatur</code></p>
+<p>Must be at least 6 characters. Example: <code>ykilsejrtxcuejcjljmrqqtwbltwyavgz</code></p>
         </div>
         </form>
 

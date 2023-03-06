@@ -1,11 +1,9 @@
 <?php
 
-namespace App\Http\Controllers\V1;
+namespace App\Http\Middleware\Controllers\V1;
 
-use App\Http\Controllers\Controller;
-use App\Models\Experience;
+use App\Http\Middleware\Controllers\Controller;
 use App\Services\ExperienceService;
-use Illuminate\Http\Request;
 use Knuckles\Scribe\Attributes\Group;
 
 #[Group('Experience')]

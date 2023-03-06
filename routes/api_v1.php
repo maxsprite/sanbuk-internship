@@ -1,11 +1,11 @@
 <?php
 
-use App\Http\Controllers\V1\UserController;
+use App\Http\Middleware\Controllers\V1\Booking\WebhookController;
+use App\Http\Middleware\Controllers\V1\BookingController;
+use App\Http\Middleware\Controllers\V1\ExperienceController;
+use App\Http\Middleware\Controllers\V1\SubscriptionController;
+use App\Http\Middleware\Controllers\V1\UserController;
 use Illuminate\Support\Facades\Route;
-use \App\Http\Controllers\V1\ExperienceController;
-use \App\Http\Controllers\V1\BookingController;
-use \App\Http\Controllers\V1\Booking\WebhookController;
-use \App\Http\Controllers\V1\SubscriptionController;
 
 Route::prefix('/auth')->group(function () {
     Route::post('/sign-up', [UserController::class, 'signUp']);
@@ -21,6 +21,31 @@ Route::prefix('/user')->name('user.')->middleware('auth:sanctum')->group(functio
         Route::post('/create', [SubscriptionController::class, 'create']);
         Route::patch('/update', [SubscriptionController::class, 'update']);
     });
+});
+
+Route::get('/products', function () {
+//    $someArray = [1, 2, 3];
+//    $someArray[] = 4;
+//
+//    $someCollection = collect([1, 2, 3]);
+//    $someCollection->push(4);
+//
+//    ray('$someArray', $someArray);
+//    ray('$someCollection', $someCollection);
+    $users = \App\Models\User::all();
+//    ray('$users', $users->pluck('email', 'id')->toArray());
+    foreach ($users as $user) {
+        ray('user', $user);
+    }
+
+    return Cache::rememberForever('stripe-products', function () {
+        $stripeService = new \App\Services\StripeService();
+        return $stripeService->client->products->all();
+    });
+});
+
+Route::get('/users', function () {
+    return new \App\Http\Resources\V1\UserCollection(\App\Models\User::all());
 });
 
 Route::prefix('/experiences')->group(function () {

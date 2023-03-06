@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Controllers\V1;
+namespace App\Http\Middleware\Controllers\V1;
 
-use App\Http\Controllers\Controller;
+use App\Http\Middleware\Controllers\Controller;
 use App\Http\Requests\Booking\CreateRequest;
 use App\Services\BookingService;
 use Knuckles\Scribe\Attributes\Authenticated;

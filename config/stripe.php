@@ -1,6 +1,6 @@
 <?php
 
 return [
-    'secret_key' => env('STRIPE_SECRET_KEY'),
-    'pk_key' => env('STRIPE_PK_KEY'),
+    'secret_key' => env('STRIPE_SECRET'),
+    'pk_key' => env('STRIPE_KEY'),
 ];

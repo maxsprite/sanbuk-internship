@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\V1;
+namespace App\Http\Middleware\Controllers\V1;
 
-use App\Http\Controllers\Controller;
+use App\Http\Middleware\Controllers\Controller;
 use App\Http\Requests\V1\User\SignInRequest;
 use App\Http\Requests\V1\User\SignUpRequest;
 use App\Http\Requests\V1\User\VerificationRequest;
+use App\Http\Resources\V1\UserResource;
 use App\Models\User;
 use App\Services\TwilioService;
 use App\Services\UserService;
@@ -64,10 +65,11 @@ class UserController extends Controller
 
     #[Subgroup('Profile')]
     #[Authenticated]
+    #[Header('Authorization', 'Bearer ')]
     #[Endpoint('Get profile')]
     public function profile()
     {
-        return auth()->user();
+        return new UserResource(auth()->user());
     }
 
     #[Subgroup('Profile')]
