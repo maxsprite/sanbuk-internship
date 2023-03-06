@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Middleware\Controllers\V1\Booking;
+namespace App\Http\Controllers\V1\Booking;
 
-use App\Http\Middleware\Controllers\Controller;
+use App\Http\Controllers\Controller;
 use App\Models\Booking;
 
 class WebhookController extends Controller

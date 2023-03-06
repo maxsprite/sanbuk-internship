@@ -1,10 +1,10 @@
 <?php
 
-use App\Http\Middleware\Controllers\V1\Booking\WebhookController;
-use App\Http\Middleware\Controllers\V1\BookingController;
-use App\Http\Middleware\Controllers\V1\ExperienceController;
-use App\Http\Middleware\Controllers\V1\SubscriptionController;
-use App\Http\Middleware\Controllers\V1\UserController;
+use App\Http\Controllers\V1\Booking\WebhookController;
+use App\Http\Controllers\V1\BookingController;
+use App\Http\Controllers\V1\ExperienceController;
+use App\Http\Controllers\V1\SubscriptionController;
+use App\Http\Controllers\V1\UserController;
 use Illuminate\Support\Facades\Route;
 
 Route::prefix('/auth')->group(function () {

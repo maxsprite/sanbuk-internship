@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Middleware\Controllers\V1;
+namespace App\Http\Controllers\V1;
 
 use App\Actions\User\Subscription\CreateSubscriptionAction;
 use App\Actions\User\Subscription\UpdateSubscriptionAction;
-use App\Http\Middleware\Controllers\Controller;
+use App\Http\Controllers\Controller;
 use App\Http\Requests\V1\User\Subscription\CreateSubscriptionRequest;
 use App\Http\Requests\V1\User\Subscription\UpdateSubscriptionRequest;
 use Knuckles\Scribe\Attributes\Authenticated;
