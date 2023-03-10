@@ -5,6 +5,7 @@ namespace App\Models;
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use App\Events\UserCreated;
 use App\Models\Interfaces\StatusInterface;
+use Filament\Models\Contracts\FilamentUser;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -51,12 +52,14 @@ use Laravel\Sanctum\HasApiTokens;
  * @method static \Illuminate\Database\Eloquent\Builder|User whereUpdatedAt($value)
  * @mixin \Eloquent
  */
-class User extends Authenticatable implements StatusInterface
+class User extends Authenticatable implements StatusInterface, FilamentUser
 {
     use HasApiTokens, HasFactory, Notifiable, SoftDeletes, Billable;
 
     const TYPE_USER = 0;
     const TYPE_VENDOR = 1;
+
+    const TYPE_ADMIN = 2;
 
     const STATUS_LIST = [
         self::STATUS_INACTIVE => 'Inactive',
@@ -76,6 +79,7 @@ class User extends Authenticatable implements StatusInterface
         'email',
         'name',
         'password',
+        'facebook_id',
     ];
 
     /**
@@ -103,5 +107,10 @@ class User extends Authenticatable implements StatusInterface
     public function bookings()
     {
         return $this->hasMany(Booking::class);
+    }
+
+    public function canAccessFilament(): bool
+    {
+        return true;
     }
 }

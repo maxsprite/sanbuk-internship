@@ -14,4 +14,6 @@
             <x-forms.buttons.default-button title="Next" type="submit" class="px-65px" :disabled="$isButtonDisabled" />
         </div>
     </form>
+
+    <a href="{{ route('auth.facebook.redirect') }}" class="block w-full bg-blue-600 text-white font-medium rounded-md text-center p-10px">Facebok Auth</a>
 </div>

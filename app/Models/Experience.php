@@ -80,4 +80,16 @@ class Experience extends Model implements StatusInterface
     {
         return $query->whereRelation('vendor', 'status', Vendor::STATUS_ACTIVE);
     }
+
+    public function getMinimalPackagePrice()
+    {
+        $prices = $this->packages->pluck('price')->toArray();
+        if (empty($prices)) {
+            return 0;
+        }
+
+        sort($prices);
+
+        return $prices[0];
+    }
 }
