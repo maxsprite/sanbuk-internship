@@ -3,17 +3,20 @@
 namespace App\Http\Livewire;
 
 use App\Models\Experience;
+use Illuminate\Database\Eloquent\Builder;
 use Livewire\Component;
 
 class ExperienceList extends Component
 {
     public $experiences = [];
     public $search = null;
+    public $filter = null;
 
-    protected $queryString = ['search'];
+    protected $queryString = ['search', 'filter'];
 
     protected $listeners = [
         'searchEvent' => 'searchListener',
+        'filterEvent' => 'filterListener',
     ];
 
     public function updated($name, $value)
@@ -33,6 +36,14 @@ class ExperienceList extends Component
         $this->initItems();
     }
 
+    public function filterListener($type, $value)
+    {
+        $this->emit('closeModal');
+        $this->filter[$type] = $value;
+        ray($this->filter);
+        $this->initItems();
+    }
+
     public function mount()
     {
         $this->initItems();
@@ -49,6 +60,14 @@ class ExperienceList extends Component
 
         if ($this->search !== null) {
             $experiences->where('name', 'like', '%'. $this->search .'%');
+        }
+
+        if ($this->filter !== null) {
+            foreach ($this->filter as $key => $values) {
+                $experiences->whereHas($key, function (Builder $query) use ($values) {
+                    return $query->whereIn('id', $values);
+                });
+            }
         }
 
         $this->experiences = $experiences->get();
