@@ -6,11 +6,14 @@ use Livewire\Component;
 
 class SignUp extends Component
 {
+    public string $title = 'Sign Up1';
     public string|null $first_name = null;
     public string|null $last_name = null;
     public string|null $phone = null;
     public string|null $email = null;
     public bool $isButtonDisabled = true;
+
+    public bool|null $isChecked = false;
 
     protected $rules = [
         'first_name' => 'required|min:2',
@@ -44,6 +47,7 @@ class SignUp extends Component
     public function submit()
     {
         ray('signup sumbit prevent');
+//        $this->isChecked = !$this->isChecked;
         $this->validate();
         ray('signup sumbit validated');
     }

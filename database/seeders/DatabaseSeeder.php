@@ -24,6 +24,7 @@ class DatabaseSeeder extends Seeder
             VendorSeeder::class,
             ExperienceSeeder::class,
             PackageSeeder::class,
+            ReviewSeeder::class,
         ]);
     }
 }

@@ -113,4 +113,14 @@ class User extends Authenticatable implements StatusInterface, FilamentUser
     {
         return true;
     }
+
+    public function reviews()
+    {
+        return $this->hasMany(Review::class);
+    }
+
+    public function reviewsLeft()
+    {
+        return $this->morphMany(Review::class, 'model');
+    }
 }

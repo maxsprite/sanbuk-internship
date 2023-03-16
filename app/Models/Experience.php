@@ -92,4 +92,9 @@ class Experience extends Model implements StatusInterface
 
         return $prices[0];
     }
+
+    public function reviewsLeft()
+    {
+        return $this->morphMany(Review::class, 'model');
+    }
 }

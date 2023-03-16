@@ -16,6 +16,7 @@ class DefaultButton extends Component
         public string|bool $type = false,
         public string $class = '',
         public bool $disabled = false,
+        public string $alpineDirectives = ''
     ) {}
 
     /**

@@ -6,3 +6,5 @@
 .btn {
     @apply text-white font-medium rounded-xl;
 }
+
+[x-cloak] { display: none !important; }
